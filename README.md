@@ -1,6 +1,12 @@
 # rustwiki.org
 
-This is the source of the [rustwiki.org][https://rustwiki.org] website.
+This is the source of the [rustwiki.org][https://rustwiki.org] website. It includes
+the official documentation list of Rust.
+
+## How to Contribute?
+
+This is a big project with many translations involved. You can contribute by
+reporting errors or suggesting improvements. Just open an issue or pull request.
 
 ## License
 
