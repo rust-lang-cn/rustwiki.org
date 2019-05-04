@@ -1,11 +1,18 @@
-# rustwiki.org 网站
+# rustwiki.org
 
-本项目为 `rustwiki.org` 的网站源码，源文件为基本的 `HTML`、`CSS` 文件，内容为 Rust 相关文档的翻译介绍和翻译文档的索引页。
+This is the source of the [rustwiki.org][https://rustwiki.org] website.
 
-## 授权协议
+## License
 
-**rustwiki.org 网站** 项目使用 Apache 2.0 license 或 MIT
-license 两种协议进行授权。
+rustwiki.og is licensed under either of
 
-详情参见 LICENSE-APACHE 和 LICENSE-MIT。
+ * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or
+   http://www.apache.org/licenses/LICENSE-2.0)
+ * MIT license ([LICENSE-MIT](LICENSE-MIT) or
+   http://opensource.org/licenses/MIT)
 
+at your option.
+
+Unless you explicitly state otherwise, any contribution intentionally submitted
+for inclusion in rustwiki.org by you, as defined in the Apache-2.0 license, shall be
+dual licensed as above, without any additional terms or conditions.
