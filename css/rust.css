@@ -447,3 +447,32 @@ a.test-arrow:hover{
 	border-width: 5px;
 	border-style: solid;
 }
+
+footer {
+    border-top: 2px solid #dedede;
+    margin: 1.2em auto 0 auto;
+    padding-top: 0.6em;
+}
+
+@media (min-width: 992px) {
+	ul.laundry-list {
+	  column-count: auto;
+	  -moz-column-count: auto;
+	  -webkit-column-count: auto;
+	}
+	img.ribbon {
+		display: inline !important;
+		position: absolute;
+		top: 0;
+		right: 0;
+		border: 0;
+    width: 149px;
+    height: 149px;
+	}
+	ul.menu .col-xs-12 {
+		padding-left: 0;
+	}
+	.resp-block {
+		display: block;
+	}
+}
