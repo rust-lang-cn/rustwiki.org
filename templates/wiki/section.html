@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block base %}
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{ get_url(path="css/wiki.css") | safe }}">
+  <link rel="icon" href="{{ get_url(path="img/favicon.ico") | safe }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  {% block seo %}
+    {% include "partials/seo.html" %}
+  {% endblock seo %}
+</head>
+
+<body>
+  <main>
+    {% block nav %}
+    <nav>
+      <div class="nav-top"><a href="{{ get_url(path="/") | safe }}">{% include "svg/rust-logo.html" %}</a></div>
+      {% set root_section = get_section(path="wiki/_index.md") -%}
+      <h1 id="release"><a href="{{ root_section.permalink | safe }}" {% if section.permalink and root_section.permalink == section.permalink %}class="current"{% else %}class="not-current"{% endif %}>{{ root_section.title }}</a></h1>
+      <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+      <div id="trees">
+        {% for p in root_section.subsections %}
+          {% set subsection = get_section(path=p) %}
+          <input class="tree-toggle{% if subsection.pages %} toggle-have-pages{% else %} toggle-no-pages{% endif %}" type="checkbox" id="{{ subsection.title | slugify  }}" {% if current_path is starting_with(subsection.path) %}checked{% endif %} />
+          <label class="tree-toggle-label{% if subsection.pages %} toggle-have-pages{% else %} toggle-no-pages{% endif %}" for="{{ subsection.title | slugify  }}"><a href="{{ subsection.permalink | safe }}">{{ subsection.title }}</a></label>
+
+          <ul class="subtree">
+            {% for page in subsection.pages %}
+              <li {% if current_path==page.path %}class="active" {% endif %}>
+                <a href="{{page.permalink | safe }}">{{page.title}}</a>
+              </li>
+
+              {% if current_path == page.path %}
+                {% set_global header_count = 0 %}
+                {% for h2 in page.toc %}
+                  {% set_global header_count = header_count + 1 %}
+                  {% for h3 in h2.children %}
+                    {% set_global header_count = header_count + 1 %}
+                      {% for h4 in h3.children %}
+                        {% set_global header_count = header_count + 1 %}
+                      {% endfor %}
+                  {% endfor %}
+                {% endfor %}
+
+                {% if header_count > 4 %}
+                  <ul id="toc">
+                    {% for h2 in page.toc %}
+                      <li><a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+                        {% if h2.children %}
+                          <ul>
+                            {% for h3 in h2.children %}
+                              <li><a href="{{ h3.permalink | safe }}">{{ h3.title }}</a></li>
+                            {% endfor %}
+                          </ul>
+                        {% endif %}
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+
+              {% endif %}
+            {% endfor %}
+          </ul>
+        {% endfor %}
+      </div>
+    </nav>
+    {% endblock nav %}
+    
+    <article>
+      {% if config.build_search_index %}
+        <div id="on_right">
+          <span id="search-ico" class="ms-Icon--Search"></span>
+        </div>
+        <div class="search-container">
+          <input id="search" type="search" placeholder="Search as you type...">
+          <div class="search-results">
+              <div class="search-results__header"></div>
+              <ul class="search-results__items"></ul>
+          </div>
+        </div>
+      {% endif %}
+
+      <div id="wrap">
+        {% block content %}
+          <h1 id="{{ section.title }}">{{ section.title }}</h1>
+          {{ section.content | safe }}
+        {% endblock content %}
+      </div>
+    </article>
+  </main>
+
+  {% if config.build_search_index %}
+    <script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") | safe }}" defer></script>
+    <script type="text/javascript" src="{{ get_url(path="search_index.en.js") | safe }}" defer></script>
+    <script type="text/javascript" src="{{ get_url(path="js/wiki.js") | safe }}" defer></script>
+  {% endif %}
+
+</body>
+</html>
+{% endblock base %}

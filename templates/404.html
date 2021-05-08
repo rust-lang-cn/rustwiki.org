@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+	<div id="main">
+		<div id="hero">
+			<h1 class="title">404: Page Not Found!</h1>
+		</div>
+		<div class="content page-not-found">
+			<p>The requested page does not exist.</p>
+			<p>You might try and start from the <a href="{{ config.base_url | safe }}">home page</a>.</p>
+		</div>
+	</div>
+{% endblock content %}

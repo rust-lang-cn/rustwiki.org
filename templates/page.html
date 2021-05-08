@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+	<div id="hero" class="wrap">
+		<h1>{{ page.title }}</h1>
+		<p>{{ page.extra.lead | default(value=page.description) }}<br></p>
+	</div>
+	<div id="{{ page.extra.id | default(value="content") }}" class="content">
+		{{ page.content | safe }}
+	</div>
+{% endblock content %}

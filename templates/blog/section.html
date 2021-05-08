@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+<div id="hero" class="wrap">
+	<h1>{{ section.title }}</h1>
+	{{ section.content | safe }}
+</div>
+<ul id="posts">
+	{% if paginator -%}
+		{{ macros::list_pages(p=paginator) }}
+	{%- endif %}
+
+	{% if paginator.previous or paginator.next -%}
+		{{ macros::paginator(paginator=paginator) }}
+	{%- endif %}
+</ul>
+{% endblock content %}

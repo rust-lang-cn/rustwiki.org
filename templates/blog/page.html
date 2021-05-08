@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+	<div id="hero">
+		<h1 itemprop="headline">{{ page.title }}</h1>
+		<time class="post-time"><span class="icon">
+				<i class="fa fa-clock-o" aria-hidden="true"></i>
+			</span>
+			<span>阅读时长：{{ page.reading_time }} 分钟</span>
+			<span class="icon">
+				<i class="fa fa-pencil" aria-hidden="true"></i>
+			</span>发布日期：<time datetime="{{ page.date }}">{{ page.date | date(format="%F")}}</time>
+		</time>
+	</div>
+	<div id="post-box">
+		<div id="post" itemprop="articleBody">
+			{{ page.content | safe }}
+		</div>
+	
+		<div class="related">
+			<p>作者：<span itemprop="author">{{ page.extra.author | default(value="Rustacean") }}</span>
+				{% if page.extra.translator %}, 译者：<span itemprop="translator">{{ page.extra.translator | default(value="rust-lang-cn") }}</span>{% endif %}，共 <span itemprop="wordCount">{{ page.word_count }}</span> 字<br>
+				{% if page.taxonomies.categories -%}
+					分类：{% for category in page.taxonomies.categories -%}{% if category_flag %}，{% endif %}<span itemprop="articleSection"><a href="{{ get_taxonomy_url(kind='categories', name=category) | safe }}">{{ category }}</a></span>{% set_global category_flag = true %}{%- endfor %}
+				{%- endif %}
+
+				{%- if page.taxonomies.categories and page.taxonomies.tags %}<br>{% endif -%}
+	
+				{% if page.taxonomies.tags -%}
+					标签：{% for tag in page.taxonomies.tags -%}{% if tag_flag %}，{% endif %}<span
+					itemprop="articleSection"><a href="{{ get_taxonomy_url(kind='tags', name=tag) | safe }}">{{ tag
+						}}</a></span>{% set_global tag_flag = true %}{%- endfor %}
+				{%- endif %}
+			</p>
+	
+			{% if page.later or page.earlier %}			  
+				<aside class="pagination">
+					{% if page.later -%}
+						<a href="{{ page.later.permalink | safe }}" class="left arrow">&#8592; {{ page.later.title }}</a>
+					{%- endif %}
+					{% if page.earlier -%}
+						<a href="{{ page.earlier.permalink | safe }}" class="right arrow">{{ page.earlier.title }} &#8594;</a>
+					{%- endif %}
+				</aside>
+			{% endif %}
+		</div>	
+	</div>
+{% endblock content %}

@@ -1,0 +1,203 @@
+{# param p:  paginator or term #}
+{% macro list_pages(p) %}
+	{% if p.pages -%}
+	{% for page in p.pages -%}
+	<li itemscope itemtype="http://schema.org/CreativeWork">
+		<h2 class="title">
+			<a href="{{ page.permalink | safe }}" itemprop="headline">{{ page.title }}</a>
+		</h2>
+		<hr>
+		<p itemprop="about">
+			{%- if page.summary -%}
+			{{ page.summary | safe }}
+			{% else -%}
+			{{ page.content | striptags | truncate(length=280) | safe }}
+			{%- endif -%}
+		</p>
+	</li>
+	{%- endfor %}
+	{% endif %}
+{% endmacro %}
+
+
+
+{% macro paginator(paginator) %}
+	<section>
+		<nav class="pagination pager align-center">
+			<hr>
+			<ul>
+				{% if paginator.previous -%}
+				<li class="prev"><a href="{{ paginator.previous | safe }}">Previous</a></li>
+				{%- endif %}
+	
+				<li><a href="" class="button round small outline">Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</a></li>
+	
+				{% if paginator.next -%}
+				<li class="next"><a href="{{ paginator.next | safe }}">Next</a></li>
+				{%- endif %}
+			</ul>
+		</nav>
+	</section>
+{% endmacro %}
+
+
+
+{% macro taxonomy(terms) %}
+<ul id="posts">
+	{% for term in terms %}
+		<li itemscope="" itemtype="http://schema.org/CreativeWork">
+			<h2 class="title"><a href="{{ term.permalink | safe }}" itemprop="headline">{{ term.name }}</a></h2>
+			<hr>
+		</li>
+	{% endfor %}
+</ul>
+{% endmacro %}
+
+
+
+{% macro seo(
+  title="",
+  og_title="",
+  author="",
+  description="",
+  site_url="",
+  image="",
+  image_height="",
+  image_width="",
+  web_type="WebSite"
+  ) -%}
+{% if title %}
+<title>{{ title }}</title>
+{% endif %}
+
+{% if og_title %}
+<meta property="og:title" content="{{ og_title }}">
+{% endif %}
+
+{% if author %}
+<meta name="author" content="{{ author }}">
+{% endif %}
+
+<meta property="og:locale" content="{{ config.extra.seo.og_locale | default(value="en-US") }}">
+
+{% if description %}
+<meta name="description" content="{{ description }}">
+<meta property="og:description" content="{{ description }}">
+{% endif %}
+
+{% if site_url %}
+<link rel="canonical" href="{{ site_url | safe }}">
+<meta property="og:url" content="{{ site_url | safe }}">
+{% endif %}
+
+{% if config.title %}
+<meta property="og:site_name" content="{{ config.title }}" />
+{% endif %}
+
+{% if image %}
+  <meta property="og:image" content="{{ get_url(path=image) | safe }}">
+  {% if image_height -%}
+    <meta property="og:image:height" content="{{ image_height }}">
+  {%- endif %}
+  {% if image_width -%}
+    <meta property="og:image:width" content="{{ image_width }}">
+  {%- endif %}
+{% endif %}
+
+{% if page.date %}
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="{{ page.date | date(format="%+") }}">
+{% endif %}
+
+{% if page.earlier %}
+  <link rel="prev" href="{{ page.earlier.permalink | safe }}">
+{% elif paginator.previous %}
+  <link rel="prev" href="{{ paginator.previous | safe }}">
+{% endif %}
+
+{% if ppage.later %}
+  <link rel="next" href="{{ page.later.permalink | safe }}">
+{% elif paginator.next %}
+  <link rel="next" href="{{ paginator.next | safe }}">
+{% endif %}
+
+{% if image %}
+  <meta name="twitter:card" content="summary_large_image"">
+  <meta property="twitter:image" content="{{ get_url(path=image) | safe }}">
+{% else %}
+  <meta name="twitter:card" content="summary">
+{% endif %}
+
+{% if og_title %}
+  <meta property="twitter:title" content="{{ og_title }}">
+{% endif %}
+
+{% if config.extra.seo.twitter.site %}
+  <meta name="twitter:site" content="@{{ config.extra.seo.twitter.site }}">
+  {% if config.extra.seo.twitter_creator %}
+    <meta name="twitter:creator" content="@{{  config.extra.seo.twitter.creator }}">
+  {% endif %}
+{% endif %}
+
+{% if config.extra.seo.facebook %}
+  {% if config.extra.seo.facebook.admins %}
+    <meta property="fb:admins" content="{{ config.extra.seo.facebook.admins }}">
+  {% endif %}
+
+  {% if config.extra.seo.facebook.publisher %}
+    <meta property="article:publisher" content="{{ config.extra.seo.facebook.publisher }}">
+  {% endif %}
+
+  {% if config.extra.seo.facebook.app_id %}
+    <meta property="fb:app_id" content="{{ config.extra.seo.facebook.app_id }}">
+  {% endif %}
+{% endif %}
+
+{% if config.extra.seo.webmaster %}
+  {% if config.extra.seo.webmaster.google %}
+    <meta name="google-site-verification" content="{{ config.extra.seo.webmaster.google }}">
+  {% endif %}
+
+  {% if config.extra.seo.webmaster.bing %}
+    <meta name="msvalidate.01" content="{{ config.extra.seo.webmaster.bing }}">
+  {% endif %}
+
+  {% if config.extra.seo.webmaster.alexa %}
+    <meta name="alexaVerifyID" content="{{ config.extra.seo.webmaster.alexa }}">
+  {% endif %}
+
+  {% if config.extra.seo.webmaster.yandex %}
+    <meta name="yandex-verification" content="{{ config.extra.seo.webmaster.yandex }}">
+  {% endif %}
+
+  {% if config.extra.seo.webmaster.baidu %}
+    <meta name="baidu-site-verification" content="{{ config.extra.seo.webmaster.baidu }}">
+  {% endif %}
+{% endif %}
+
+<script type="application/ld+json">
+{
+  "author": {
+    "@type":"Organization",
+	  "name":"{{ author }}",
+  },
+  "description": "{{description }}",
+  "url": "{{ site_url | safe }}",
+  "@context":"https://schema.org",
+  "@type": "{{ web_type }}",
+  "headline": "{{ og_title }}"
+  {% if page %}
+    {% if page.updated %}
+      "dateModified":"{{ page.updated | date(format="%+") }}",
+    {% endif %}
+    {% if page.date %}
+      "datePublished":"{{ page.date | date(format="%+") }}",
+    {% endif %}
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"{{ site_url | safe }}"
+    },
+  {% endif %}
+}
+</script>
+{%- endmacro %}

@@ -1,0 +1,80 @@
+{%- import 'macros.html' as macros -%}
+
+{%- block base -%}
+<!DOCTYPE html>
+<html lang="{{ config.extra.language_code | default(value=" en-US") }}">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	{% block seo %}
+    {% include "partials/seo.html" %}
+  {% endblock seo %}
+	<style type="text/css">
+		
+	</style>
+
+	<link rel="icon" href="{{ get_url(path="img/favicon.ico") | safe }}">
+	<link href="{{ get_url(path="css/main.css") | safe }}" rel="stylesheet" type="text/css">
+</head>
+<body class="page-kube">
+{% block header -%}
+	<header>
+		<div class="show-sm">
+			<div id="nav-toggle-box">
+				<div id="nav-toggle-brand">
+					<a href="{{ config.base_url | safe }}">{{ config.title | default(value="Rust Wiki")}}</a>
+				</div><a data-component="toggleme" data-target="#top" href="#" id="nav-toggle"><i class="kube-menu"></i></a>
+			</div>
+		</div>
+		<div class="hide-sm" id="top">
+			<div id="top-brand">
+				<a href="{{ config.base_url | safe }}" title="home">{{ config.title | default(value="Rust Wiki")}}</a>
+			</div>
+			<nav id="top-nav-main">
+				{% if config.extra.menu -%}
+					<ul>
+						{% for menu in config.extra.menu %}
+							<li><a href="{{ menu.url | default(value=get_url(path=menu.path | default(value="/") | safe) | safe) | safe }}">{{ menu.name }}</a></li>
+						{% endfor %}
+					</ul>
+				{%- endif %}
+			</nav>
+			<nav id="top-nav-extra">
+				<ul>
+				</ul>
+			</nav>
+		</div>
+	</header>
+{% endblock header -%}
+
+<main>
+{% block content %}{% endblock content %}
+</main>
+
+{% block footer %}
+	<footer>
+		<footer id="footer">
+			<nav>
+				
+				<ul>
+					<li><span>Rust Wiki</span></li>
+					{% if config.extra.footer -%}
+						{% for footer in config.extra.footer -%}
+							<li><a href="{{ footer.url | default(value=get_url(path=footer.path | default(value="/") | safe) | safe) | safe }}">{{ footer.name }}</a></li>
+						{%- endfor %}
+					{%- endif %}
+				</ul>
+			</nav>
+			<p>{{ config.extra.copy | default(value="&copy; 2016-2021 rust-lang-cn") | safe }}</p>
+		</footer>
+	</footer>
+{% endblock footer %}
+
+	<script src="{{ get_url(path="js/jquery.min.js") | safe}}" type="text/javascript"></script>
+	<script src="{{ get_url(path="js/kube.min.js") | safe }}" type="text/javascript"></script>
+	</script>
+</body>
+</html>
+{% endblock base %}

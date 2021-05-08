@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+	<div id="hero" class="wrap">
+		<h1>Tags</h1>
+	</div>
+
+	{{ macros::taxonomy(terms=terms)}}
+{% endblock content %}

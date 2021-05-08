@@ -1,0 +1,54 @@
+{% extends "section.html" %}
+
+
+
+{% block header -%}
+	<header>
+		<div class="show-sm">
+			<div id="nav-toggle-box">
+				<div id="nav-toggle-brand">
+					<a href="{{ get_url(path="en") | safe }}">{{ config.title | default(value="Rust Wiki")}}</a>
+				</div><a data-component="toggleme" data-target="#top" href="#" id="nav-toggle"><i class="kube-menu"></i></a>
+			</div>
+		</div>
+		<div class="hide-sm" id="top">
+			<div id="top-brand">
+				<a href="{{ get_url(path="en") | safe }}" title="home">{{ config.title | default(value="Rust Wiki")}}</a>
+			</div>
+			<nav id="top-nav-main">
+				{% if config.extra.en.menu -%}
+					<ul>
+						{% for menu in config.extra.en.menu %}
+							<li><a href="{{ menu.url | default(value=get_url(path=menu.path | default(value="/") | safe) | safe) | safe }}">{{ menu.name }}</a></li>
+						{% endfor %}
+					</ul>
+				{%- endif %}
+			</nav>
+			<nav id="top-nav-extra">
+				<ul>
+				</ul>
+			</nav>
+		</div>
+	</header>
+{% endblock header -%}
+
+
+
+{% block footer %}
+	<footer>
+		<footer id="footer">
+			<nav>
+				
+				<ul>
+					<li><span>Rust Wiki</span></li>
+					{% if config.extra.en.footer -%}
+						{% for footer in config.extra.en.footer -%}
+							<li><a href="{{ footer.url | default(value=get_url(path=footer.path | default(value="/") | safe) | safe) | safe }}">{{ footer.name }}</a></li>
+						{%- endfor %}
+					{%- endif %}
+				</ul>
+			</nav>
+			<p>{{ config.extra.copy | default(value="&copy; 2016-2021 rust-lang-cn") | safe }}</p>
+		</footer>
+	</footer>
+{% endblock footer %}

@@ -1,0 +1,47 @@
+{% extends "base.html"%}
+
+
+
+{% block content %}
+	<div id="main">
+		<div id="hero">
+			<h1>{{ section.title }}</h1>
+			<p>{{ section.description }}</p>
+		</div>
+		<div id="action-buttons">
+			<a class="button primary big" href="{{ section.extra.button.primary_url | default(value=get_url(path="/") | safe) | safe }}">{{ section.extra.button.primary }}</a>
+			<a class="button outline big" href="{{ section.extra.button.outline_url | default(value=get_url(path="/") | safe) | safe }}">{{ section.extra.button.outline }}</a>
+			<p>{{ section.extra.button.content | safe }}</p>
+		</div>
+		<div id="kube-features">
+			{% if section.extra.items %}
+				<div class="row gutters">
+				{% for item in section.extra.items %}
+				<div class="col col-4 item">
+					<figure>
+						<span class="{{ item.icon | default(value="ti-close") }} ti-icon"></span>
+					</figure>
+					<a href="{{ item.url | safe }}">
+						<h3>{{ item.title }}</h3>
+						<p>{{ item.content | safe }}</p>
+					</a>
+				</div>
+				{% endfor %}
+				</div>
+			{% endif -%}
+
+			{% if section.extra.other_items %}
+				<div class="row gutters">
+					{% for item in section.extra.other_items %}
+					<div class="col col-4 item">
+						<a href="{{ item.url | safe }}">
+							<h4>{{ item.title }}</h4>
+							<p>{{ item.content | safe}}</p>
+						</a>						
+					</div>
+					{% endfor %}
+				</div>
+			{% endif %}
+		</div>
+	</div>
+{% endblock content %}

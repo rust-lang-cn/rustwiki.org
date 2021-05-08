@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+	<div id="main">
+		<div id="hero">
+			<h1> {{ section.title }} </h1>
+			<p>{{ section.extra.lead | default(value=section.description) }}<br></p>
+		</div>
+		<div id="components">
+			<div class="row gutters">
+				{% if section.extra.docs %}
+					{% for doc in section.extra.docs %}
+						<div class="col col-4 item">
+							<h4><a href="{{ doc.url | default(value=get_url(path=doc.path | default(value="docs") | safe) | safe) | safe }}">{{ doc.title | safe }}</a></h4>
+							<p>{{ doc.content | safe }}</p>
+						</div>
+					{% endfor %}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endblock content %}
+
+

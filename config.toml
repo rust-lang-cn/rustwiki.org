@@ -1,0 +1,97 @@
+# The URL the site will be built for
+base_url = "https://rustwiki.org"
+
+# The basic information
+title = "Rust Wiki"
+description = "Rust Wiki 是 Rust 官方文档中文翻译项目组创建的 Rust 文档在线知识库，涵盖了最全面的 Rust 的中文学习内容和编程入门资料，包括 Rust 官方或非官方文档的中文翻译，以及 Rust 中文翻译项目组制定的 Rust 翻译规范及标准。"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+# The taxonomies to be rendered for the site and their configuration.
+taxonomies = [
+  {name = "categories", paginate_by = 10, feed = true},
+  {name = "tags", feed = true}, # each tag will have its own feed
+]
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+highlight_theme = "base16-ocean-light"
+
+[extra]
+# Put all your custom variables here
+author = "rust-lang-cn"
+
+language_code = "zh-CN"
+copy = "&copy; 2016-2021 rust-lang-cn"
+
+
+
+################################ Chinese Version ###############################
+
+# Header menus
+[[extra.menu]]
+name = "文档教程"
+path = "/docs/"
+
+[[extra.menu]]
+name = "Wiki"
+path = "/wiki/"
+
+[[extra.menu]]
+name = "博客"
+path = "/blog/"
+
+[[extra.menu]]
+name = "常见问题"
+path = "/faq/"
+
+[[extra.menu]]
+name = "GitHub"
+url = "https://github.com/rust-lang-cn"
+
+
+# Footer
+[[extra.footer]]
+name = "教程"
+path = "/docs/"
+
+[[extra.footer]]
+name = "Wiki"
+path = "/wiki/"
+
+[[extra.footer]]
+name = "常见问题"
+path = "/faq/"
+
+[[extra.footer]]
+name = "GitHub"
+url = "https://github.com/rust-lang-cn"
+
+[[extra.footer]]
+name = "English"
+path = "/en/"
+
+
+
+################################ English Version ###############################
+
+# Header menus
+[[extra.en.menu]]
+name = "GitHub"
+url = "https://github.com/rust-lang-cn"
+
+
+# Footer
+[[extra.en.footer]]
+name = "GitHub"
+url = "https://github.com/rust-lang-cn"
+
+[[extra.en.footer]]
+name = "简体中文"
+path = "/"

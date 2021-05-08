@@ -1,0 +1,143 @@
+{%- set site_url = current_url | default(value=get_url(path="404.html")) -%}
+{% set author = config.extra.author | default(value="") -%}
+{% set description = config.description | default(value="") -%}
+{% set image = config.extra.seo.image | default(value="") -%}
+{% set image_height = config.extra.seo.image_height | default(value=0) -%}
+{% set image_width = config.extra.seo.image_width | default(value=0) -%}
+
+{%- set is_homepage = false -%}
+{%- if current_url -%}
+  {%- set current_url_done = current_url | trim_end_matches(pat="/") -%}
+  {%- set get_url_done = get_url(path="/") | trim_end_matches(pat="/") -%}
+  {%- if current_url_done == get_url_done -%}
+    {%- set is_homepage = true -%}
+  {%- endif -%}
+{% endif -%}
+
+{% if is_homepage -%}
+  {% if config.title and section.title -%}
+  	{% set title = config.title ~ " - " ~ section.title -%}
+  {% elif section.title -%}
+		{% set title = section.title -%}
+  {% elif config.title -%}
+    {% set title = config.title -%}
+  {% else -%}
+    {% set title = "" -%}
+  {% endif -%}
+
+  {% set og_title = title -%}
+
+  {% if not description and section.description -%}
+		{% set description = section.description -%}
+  {% endif -%}
+
+  {% set web_type = "WebPage" -%}
+  
+  {{ macros::seo(title=title, og_title=og_title, author=author, description=description, site_url=site_url, image=image, image_height=image_height, image_width=image_width, web_type=web_type) }}
+
+{%- elif page -%}
+	{%- set og_title = page.title -%}
+
+  {% if config.title and page.title -%}
+  	{% set title = page.title ~ " | " ~ config.title -%}
+  {% elif page.title -%}
+		{% set title = page.title -%}
+  {% elif config.title -%}
+    {% set title = config.title -%}
+  {% else -%}
+    {% set title = "" -%}
+  {% endif -%}
+
+  {% if page.extra.author -%}
+		{% set author = page.extra.author -%}
+  {% endif -%}
+
+  {% if page.description -%}
+		{% set description = page.description -%}
+  {% endif -%}
+
+  {% if page.extra.image -%}
+		{% set image = page.extra.image -%}
+  {% endif -%}
+
+  {% if page.extra.image_height -%}
+		{% set image_height = page.extra.image_height -%}
+  {% endif -%}
+
+  {% if page.extra.image_width -%}
+		{% set image_width = page.extra.image_width -%}
+  {% endif -%}
+
+	{% set path = current_path | trim_start_matches(pat="/") | split(pat="/") | first -%}
+	{% if path == "blog" or path == "post" or path == "posts" -%}
+		{% set web_type = "BlogPosting" -%}
+	{% else -%}
+		{% set web_type = "WebPage" -%}
+	{% endif -%}
+  
+  {{ macros::seo(title=title, og_title=og_title, author=author, description=description, site_url=site_url, image=image, image_height=image_height, image_width=image_width, web_type=web_type) }}
+
+{% elif section -%}
+	{% set og_title = section.title | default(value="Wiki") -%}
+
+  {% if config.title and section.title -%}
+  	{% set title = section.title ~ " | " ~ config.title -%}
+  {% elif section.title -%}
+		{% set title = section.title -%}
+  {% elif config.title -%}
+    {% set title = config.title -%}
+  {% else -%}
+    {% set title = "" -%}
+  {% endif -%}
+
+  {% if section.description -%}
+		{% set description = section.description -%}
+  {% endif -%}
+
+  {% set web_type = "WebPage" -%}
+  
+  {{ macros::seo(title=title, og_title=og_title, author=author, description=description, site_url=site_url, image=image, image_height=image_height, image_width=image_width, web_type=web_type) }}
+
+{% elif terms -%}
+	{% set tox = current_path | trim_start_matches(pat="/") | split(pat="/") | first | capitalize -%}
+
+  {% set og_title = tox -%}
+	
+  {% if config.title -%}
+    {% set title = tox ~ " | " ~ config.title -%}
+  {% else -%}
+    {% set title = tox -%}
+  {% endif -%}
+
+  {% set web_type = "WebPage" -%}
+  
+  {{ macros::seo(title=title, og_title=og_title, author=author, description=description, site_url=site_url, image=image, image_height=image_height, image_width=image_width, web_type=web_type) }}
+
+{% elif term -%}
+  {%- set og_title = term.name -%}
+	
+  {% if config.title -%}
+    {% set title = term.name ~ " | " ~ config.title -%}
+  {% else -%}
+    {% set title = term.name -%}
+  {% endif -%}
+
+  {% set web_type = "WebPage" -%}
+  
+  {{ macros::seo(title=title, og_title=og_title, author=author, description=description, site_url=site_url, image=image, image_height=image_height, image_width=image_width, web_type=web_type) }}
+
+{% else -%}
+	{%- set home = "404" -%}
+  {% set og_title = home -%}
+
+  {% if config.title -%}
+  	{% set title = home ~ " | " ~ config.title -%}
+  {% else -%}
+	{% set title = home -%}
+  {% endif -%}
+
+  {% set web_type = "WebPage" -%}
+  
+  {{ macros::seo(title=title, og_title=og_title, author=author, description=description, site_url=site_url, image=image, image_height=image_height, image_width=image_width, web_type=web_type) }}
+
+{%- endif -%}
