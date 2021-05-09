@@ -1,6 +1,6 @@
 # rustwiki.org
 
-This is the source of the [rustwiki.org](https://rustwiki.org) website. 
+This is the source of the [rustwiki.org](https://rustwiki.org) website.
 
 ## Running and Building
 
@@ -9,12 +9,12 @@ First, You need to install the [Zola](https://www.getzola.org/documentation/gett
 To run the site locally:
 
 ```bash
-$ git clone https://github.com/rust-lang-cn/rustwiki.org
+$ git clone https://github.com/rust-lang-cn/rustwiki.org.git
 $ cd rustwiki.org
 $ zola serve
 ```
 
-If you want to build the site, just run `zola build`. From there, the generated HTML will be in a `public` directory.
+If you want to build the site, just run `zola build`. From there, the generated HTML will be in the `public` directory.
 
 ## How to Contribute?
 

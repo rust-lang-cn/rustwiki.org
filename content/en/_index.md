@@ -4,7 +4,7 @@ description = "The Rust Documentation List is the list of Rust Programming Langu
 template = "i18/en.html"
 
 [extra]
-lead = "List of the list of Rust Programming Language resources."
+lead = "List of the Rust Programming Language resources."
 
 [[extra.docs]]
 title = "The Rust Programming Language"

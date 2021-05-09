@@ -12,7 +12,7 @@ primary_url = "https://rustwiki.org/zh-CN/book"
 outline = "通过例子学 Rust"
 outline_url = "https://rustwiki.org/zh-CN/rust-by-example"
 
-content = "👉 Rust 官方提供的两个学习 Rust 的必备教程"
+content = "👉 Rust 官方的两个必备学习教程"
 
 
 [[extra.items]]
@@ -29,7 +29,7 @@ icon = "ti-star"
 
 [[extra.items]]
 title = "rustlings"
-content = "Rust 小练习，Rust 官方推出的交互式练习小工具，边阅读修改和运行代码，边学习新知识。"
+content = "Rust 小练习，Rust 官方推出的交互式练习工具，边阅读、修改和运行代码，边学习概念。"
 url = "https://github.com/rust-lang-cn/rustlings-cn"
 icon = "ti-pencil-alt"
 
