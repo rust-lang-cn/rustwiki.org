@@ -15,12 +15,14 @@ lead = "Rust 中文教程等相关资源列表"
 [[extra.docs]]
 title = "Rust 程序设计语言"
 content = "官方推出的学习 Rust 基本教程"
-url = "https://rustwiki.org/zh-CN/book"
+# url = "https://rustwiki.org/zh-CN/book"
+path = "zh-CN/book"
 
 [[extra.docs]]
 title = "通过例子学 Rust"
 content = "官方推出的学习 Rust 的例子教程"
-url = "https://rustwiki.org/zh-CN/rust-by-example"
+# url = "https://rustwiki.org/zh-CN/rust-by-example"
+path = "zh-CN/rust-by-example"
 
 [[extra.docs]]
 title = "Rust 规范文档"

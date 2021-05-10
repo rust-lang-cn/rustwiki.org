@@ -9,12 +9,14 @@ lead = "List of the Rust Programming Language resources."
 [[extra.docs]]
 title = "The Rust Programming Language"
 content = "The Rust Programming Language, an introductory book about Rust. The Rust programming language helps you write faster, more reliable software."
-url = "https://doc.rust-lang.org/book/"
+# url = "https://doc.rust-lang.org/book/"
+path = "en/book/"
 
 [[extra.docs]]
 title = "Rust By Example"
 content = "Rust by Example (RBE) is a collection of runnable examples that illustrate various Rust concepts and standard libraries."
-url = "https://doc.rust-lang.org/rust-by-example/"
+# url = "https://doc.rust-lang.org/rust-by-example/"
+path = "en/rust-by-example/"
 
 [[extra.docs]]
 title = "Rustlings"

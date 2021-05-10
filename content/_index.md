@@ -7,10 +7,12 @@ description = "Rust 官方文档翻译项目组提供了全面的学习 Rust 的
 
 [extra.button]
 primary = "Rust 程序设计语言"
-primary_url = "https://rustwiki.org/zh-CN/book"
+# primary_url = "https://rustwiki.org/zh-CN/book"
+primary_path = "zh-CN/book"
 
 outline = "通过例子学 Rust"
-outline_url = "https://rustwiki.org/zh-CN/rust-by-example"
+# outline_url = "https://rustwiki.org/zh-CN/rust-by-example"
+outline_path = "zh-CN/rust-by-example"
 
 content = "👉 Rust 官方的两个必备学习教程"
 
@@ -18,13 +20,15 @@ content = "👉 Rust 官方的两个必备学习教程"
 [[extra.items]]
 title = "Rust 程序设计语言"
 content = "Rust 官方编著的 Rust 基本教程，也称 Rust Book，中文出版书名译作《Rust 权威指南》。"
-url = "https://rustwiki.org/zh-CN/book"
+# url = "https://rustwiki.org/zh-CN/book"
+path = "zh-CN/book"
 icon = "ti-medall"
 
 [[extra.items]]
 title = "通过例子学 Rust"
 content = "每个小节都提供一个完整的 Rust 代码简例，通过这些例子可以轻松掌握 Rust 的各个知识点。"
-url = "https://rustwiki.org/zh-CN/rust-by-example"
+# url = "https://rustwiki.org/zh-CN/rust-by-example"
+path = "zh-CN/rust-by-example"
 icon = "ti-star"
 
 [[extra.items]]
@@ -37,16 +41,19 @@ icon = "ti-pencil-alt"
 [[extra.other_items]]
 title = "Rust 版本指南"
 content = "了解 Rust 版本有关内容，比如初版（Rust 2015）和 Rust 2018 版，掌握如何迁移代码。"
-url = "https://rustwiki.org/zh-CN/edition-guide/"
+# url = "https://rustwiki.org/zh-CN/edition-guide/"
+path = "zh-CN/edition-guide"
 
 [[extra.other_items]]
 title = "Rust 语言术语中英文对照表"
 content = "Rust 中文翻译项目组提供，致力于实现 Rust 的文档和书籍中文的术语都保持一致性。"
-url = "https://rustwiki.org/wiki/translate/english-chinese-glossary-of-rust"
+# url = "https://rustwiki.org/wiki/translate/english-chinese-glossary-of-rust"
+path = "wiki/translate/english-chinese-glossary-of-rust"
 
 [[extra.other_items]]
 title = "Rust 规范文档"
 content = "Rust 中文资源和配套措施，相关翻译指引的范，以及中文翻译项目组的社区运作说明等。"
-url = "https://rustwiki.org/wiki"
+# url = "https://rustwiki.org/wiki"
+path = "wiki"
 
 +++
