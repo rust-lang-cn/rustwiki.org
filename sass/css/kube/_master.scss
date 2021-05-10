@@ -855,10 +855,14 @@ body.page-account #hero {
   text-align: center; }
   #kube-features h3 {
     margin-top: 0; }
-  #kube-features .row:first-child {
+  #kube-features .row {
     padding-bottom: 32px;
     margin-bottom: 64px;
     border-bottom: 1px dashed rgba(0, 0, 0, 0.15); }
+  #kube-features .row:last-child {
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+    border-bottom: none; }
   #kube-features p {
     font-size: 15px;
     color: rgba(0, 0, 0, 0.75); }

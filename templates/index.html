@@ -15,32 +15,40 @@
 		</div>
 		<div id="kube-features">
 			{% if section.extra.items %}
-				<div class="row gutters">
 				{% for item in section.extra.items %}
-				<div class="col col-4 item">
+					{% if loop.index0 % 3 == 0 -%}
+						<div class="row gutters">
+					{%- endif %}
+					<div class="col col-4 item">
 					<figure>
 						<span class="{{ item.icon | default(value="ti-close") }} ti-icon"></span>
 					</figure>
-					<a href="{{ item.url | default(value=item.path | default(value="/") | safe) | safe }}">
+					<a href="{{ item.url | default(value=item.path | default(value=" /") | safe) | safe }}">
 						<h3>{{ item.title }}</h3>
 						<p>{{ item.content | safe }}</p>
 					</a>
-				</div>
+					</div>
+					{% if loop.index0 % 3 == 2 or loop.last -%}
+						</div>
+					{% endif -%}
 				{% endfor %}
-				</div>
 			{% endif -%}
 
 			{% if section.extra.other_items %}
-				<div class="row gutters">
-					{% for item in section.extra.other_items %}
+				{% for item in section.extra.other_items %}
+					{% if loop.index0 % 3 == 0 -%}
+						<div class="row gutters">
+					{%- endif %}	
 					<div class="col col-4 item">
-						<a href="{{ item.url | default(value=item.path | default(value="/") | safe) | safe }}">
+						<a href="{{ item.url | default(value=item.path | default(value=" /") | safe) | safe }}">
 							<h4>{{ item.title }}</h4>
 							<p>{{ item.content | safe}}</p>
 						</a>						
 					</div>
-					{% endfor %}
-				</div>
+					{% if loop.index0 % 3 == 2 or loop.last -%}
+						</div>
+					{% endif -%}
+				{% endfor %}
 			{% endif %}
 		</div>
 	</div>

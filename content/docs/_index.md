@@ -25,6 +25,21 @@ content = "官方推出的学习 Rust 的例子教程"
 path = "zh-CN/rust-by-example"
 
 [[extra.docs]]
+title = "Rust 参考手册"
+content = "官方的 Rust 语言规范，涵盖 Rust 的最全面的规范内容，目前文档还未稳定，属于预览版。"
+path = "zh-CN/reference"
+
+[[extra.docs]]
+title = "Rust Cookbook"
+content = "Rust 官方图书，由一系列简单程序示例构成，展示了 Rust 实际开发场景的良好实践。"
+path = "zh-CN/rust-cookbook"
+
+[[extra.docs]]
+title = "Cargo 手册"
+content = "Cargo 是 Rust 的包管理器，通过本手册全面了解如何构建 Rust 程序和大型项目。"
+path = "zh-CN/cargo"
+
+[[extra.docs]]
 title = "Rust 规范文档"
 content = "Rust 中文资源的最全面的指南"
 path = "wiki"

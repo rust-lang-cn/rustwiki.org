@@ -16,6 +16,7 @@ outline_path = "zh-CN/rust-by-example"
 
 content = "👉 Rust 官方的两个必备学习教程"
 
+# icon 来源：https://themify.me/themify-icons
 
 [[extra.items]]
 title = "Rust 程序设计语言"
@@ -36,6 +37,24 @@ title = "rustlings"
 content = "Rust 小练习，Rust 官方推出的交互式练习工具，边阅读、修改和运行代码，边学习概念。"
 url = "https://github.com/rust-lang-cn/rustlings-cn"
 icon = "ti-pencil-alt"
+
+[[extra.items]]
+title = "Rust 参考手册"
+content = "官方的 Rust 语言规范，涵盖 Rust 的最全面的规范内容，目前文档还未稳定，属于预览版。"
+path = "zh-CN/reference"
+icon = "ti-book"
+
+[[extra.items]]
+title = "Rust Cookbook"
+content = "Rust 官方图书，由一系列简单程序示例构成，展示了 Rust 实际开发场景的良好实践。"
+path = "zh-CN/rust-cookbook"
+icon = "ti-key"
+
+[[extra.items]]
+title = "Cargo 手册"
+content = "Cargo 是 Rust 的包管理器，通过本手册全面了解如何构建 Rust 程序和大型项目。"
+path = "zh-CN/cargo"
+icon = "ti-receipt"
 
 
 [[extra.other_items]]
