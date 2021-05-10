@@ -40,12 +40,17 @@ url = "https://doc.rust-lang.org/rustc/"
 
 [[extra.docs]]
 title = "The Cargo Book"
-content = "A book about Cargo, the Rust package manager. "
+content = "A book about Cargo, the Rust package manager."
 url = "https://doc.rust-lang.org/cargo/"
 
 [[extra.docs]]
+title = "Rust Compiler Error Index"
+content = "In-depth explanations of the errors you may see from the Rust compiler."
+url = "https://doc.rust-lang.org/error-index.html"
+
+[[extra.docs]]
 title = "The Reference"
-content = "This book is the primary reference for the Rust programming language. "
+content = "This book is the primary reference for the Rust programming language."
 url = "https://doc.rust-lang.org/reference/"
 
 [[extra.docs]]
@@ -72,4 +77,20 @@ url = "https://github.com/rust-embedded/"
 title = "The Embedded Rust Book"
 content = "An introductory book about using the Rust Programming Language on \"Bare Metal\" embedded systems, such as Microcontrollers."
 url = "https://doc.rust-lang.org/embedded-book/"
+
+[[extra.docs]]
+title = "Command line apps in Rust"
+content = "Learn how to build effective command line applications in Rust."
+url = "https://rust-cli.github.io/book/index.html"
+
+[[extra.docs]]
+title = "Rust and WebAssembly"
+content = "Use Rust to build browser-native libraries through WebAssembly."
+url = "https://rustwasm.github.io/docs/book/"
+
+[[extra.docs]]
+title = "Cookin' with Rust"
+content = "This Rust Cookbook is a collection of simple examples that demonstrate good practices to accomplish common programming tasks, using the crates of the Rust ecosystem."
+url = "https://rust-lang-nursery.github.io/rust-cookbook/"
+
 +++
