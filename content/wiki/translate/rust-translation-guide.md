@@ -38,8 +38,8 @@ Rust 语言的学习或参考文档大都列在 [**Rust 学习指引页**](https
 - [Cargo 帮助文档](https://doc.rust-lang.org/cargo/index.html)，对应 [GitHub 仓库源文件](https://github.com/rust-lang/cargo/tree/master/src/doc/src)
 - [rustdoc 帮助文档](https://doc.rust-lang.org/rustdoc/index.html)，对应 [GitHub 仓库源文件](https://github.com/rust-lang/rust/tree/master/src/doc/rustdoc)
 - [rustc 帮助文档](https://doc.rust-lang.org/rustc/index.html)，对应 [GitHub 仓库源文件](https://github.com/rust-lang/rust/tree/master/src/doc/rustc)
-- [Rust 编译错误索引](https://doc.rust-lang.org/error-index.html)，对应 [GitHub 仓库源代码](https://github.com/rust-lang/rust/blob/master/src/librustc_mir/error_codes.rs)
-- [《Rust 语言参考》（The Rust Reference）](https://doc.rust-lang.org/reference/index.html)，对应 [GitHub 仓库](https://github.com/rust-lang-nursery/reference)
+- [Rust 编译错误索引](https://doc.rust-lang.org/error-index.html)
+- [《Rust 语言参考》（The Rust Reference）](https://doc.rust-lang.org/reference/index.html)，对应 [GitHub 仓库](https://github.com/rust-lang/reference)
 - [The Rustonomicon](https://doc.rust-lang.org/nomicon/)，对应 [GitHub 仓库](https://github.com/rust-lang-nursery/nomicon)
 
 以上文档优先处理，这些文档都循序渐进翻译成中文文档。还有其他更多官方或其他非官方相关的文档：
@@ -52,8 +52,8 @@ Rust 语言的学习或参考文档大都列在 [**Rust 学习指引页**](https
 - [rustc 指引——Rust 编译器的工作原理及如何参与贡献（rustc-guide）](https://rust-lang.github.io/rustc-guide/)，对应 [GitHub 仓库](https://github.com/rust-lang/rustc-guide)
 - [rustup 命令说明](https://github.com/rust-lang/rustup.rs)，本翻译项目会将 `rustup` 的相关说明翻译成中文
 - [Rust RFC——Rust 发展相关制定的文稿](https://rust-lang.github.io/rfcs/)，对应 [GitHub 仓库](https://github.com/rust-lang/rfcs)
-- [mdBook 使用手册](https://rust-lang-nursery.github.io/mdBook/)，对应 [GitHub 仓库](https://github.com/rust-lang-nursery/mdBook)
-- [Rust API 指导原则](https://rust-lang-nursery.github.io/api-guidelines/)，对应 [GitHub 仓库](https://github.com/rust-lang-nursery/api-guidelines)
+- [mdBook 使用手册](https://rust-lang.github.io/mdBook/)，对应 [GitHub 仓库](https://github.com/rust-lang/mdBook)
+- [Rust API 指导原则](https://rust-lang.github.io/api-guidelines/)，对应 [GitHub 仓库](https://github.com/rust-lang/api-guidelines)
 - [async-book](https://rust-lang.github.io/async-book/)，对应 [GitHub 仓库](https://github.com/rust-lang/async-book)
 
 上述文档的源文件有些是放在 [rust](https://github.com/rust-lang/rust) 和 [cargo](https://github.com/rust-lang/cargo) 的仓库的子目录中：[Rust 文档](https://github.com/rust-lang/rust/tree/master/src/doc) 和 [cargo 文档](https://github.com/rust-lang/cargo/tree/master/src/doc)。
