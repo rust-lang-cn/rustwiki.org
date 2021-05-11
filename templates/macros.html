@@ -115,7 +115,7 @@
   <link rel="prev" href="{{ paginator.previous | safe }}">
 {% endif %}
 
-{% if ppage.later %}
+{% if page.later %}
   <link rel="next" href="{{ page.later.permalink | safe }}">
 {% elif paginator.next %}
   <link rel="next" href="{{ paginator.next | safe }}">

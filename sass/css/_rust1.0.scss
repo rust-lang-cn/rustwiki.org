@@ -1,37 +1,34 @@
+// 已废弃不再使用 —— 2021.05.11
+@charset "UTF-8";
 @font-face {
 	font-family: 'Fira Sans';
 	font-style: normal;
 	font-weight: 400;
 	src: local('Fira Sans'), url("../font/FiraSans-Regular.woff") format('woff');
-	font-display: swap;
 }
 @font-face {
 	font-family: 'Fira Sans';
 	font-style: normal;
 	font-weight: 500;
 	src: local('Fira Sans Medium'), url("../font/FiraSans-Medium.woff") format('woff');
-	font-display: swap;
 }
 @font-face {
 	font-family: 'Source Serif Pro';
 	font-style: normal;
 	font-weight: 400;
-	src: local('Source Serif Pro'), url("../font/SourceSerifPro-Regular.ttf.woff") format('woff');
-	font-display: swap;
+	src: local('Source Serif Pro'), url("../font/SourceSerifPro-Regular.woff") format('woff');
 }
 @font-face {
 	font-family: 'Source Serif Pro';
 	font-style: italic;
 	font-weight: 400;
-	src: url("../font/SourceSerifPro-It.ttf.woff") format('woff');
-	font-display: swap;
+	src: url("../font/Heuristica-Italic.woff") format('woff');
 }
 @font-face {
 	font-family: 'Source Serif Pro';
 	font-style: normal;
 	font-weight: 700;
-	src: local('Source Serif Pro Bold'), url("../font/SourceSerifPro-Bold.ttf.woff") format('woff');
-	font-display: swap;
+	src: local('Source Serif Pro Bold'), url("../font/SourceSerifPro-Bold.woff") format('woff');
 }
 @font-face {
 	font-family: 'Source Code Pro';
@@ -40,7 +37,6 @@
 	/* Avoid using locally installed font because bad versions are in circulation:
 	 * see https://github.com/rust-lang/rust/issues/24355 */
 	src: url("../font/SourceCodePro-Regular.woff") format('woff');
-	font-display: swap;
 }
 
 *:not(body) {
@@ -55,7 +51,6 @@ body {
 	background-color: white;
 	margin: 0 auto;
 	padding: 0 15px;
-	// font-family: "Source Serif Pro", Georgia, Times, "Times New Roman", serif;
 	font-family: "Source Serif Pro", Georgia, Times, "Times New Roman", serif, "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", '微软雅黑', '思源黑体', SYHT, "WenQuanYi Micro Hei", sans-serif;
 	font-size: 18px;
 	color: #333;
@@ -333,7 +328,6 @@ table th {
 
 /* Code snippets */
 
-.example-wrap { position: relative; }
 pre.rust { position: relative; }
 a.test-arrow {
 	background-color: rgba(78, 139, 202, 0.2);
@@ -454,4 +448,62 @@ a.test-arrow:hover{
 	margin-top: -5px;
 	border-width: 5px;
 	border-style: solid;
+}
+
+footer {
+    border-top: 2px solid #dedede;
+    margin: 1.2em auto 0 auto;
+    padding-top: 0.6em;
+}
+
+@media (min-width: 992px) {
+	ul.laundry-list {
+	  column-count: auto;
+	  -moz-column-count: auto;
+	  -webkit-column-count: auto;
+	}
+	img.ribbon {
+		display: inline !important;
+		position: absolute;
+		top: 0;
+		right: 0;
+		border: 0;
+    width: 149px;
+    height: 149px;
+	}
+	ul.menu .col-xs-12 {
+		padding-left: 0;
+	}
+	.resp-block {
+		display: block;
+	}
+}
+
+nav {
+	display: none;
+}
+
+#search-input {
+	width: calc(100% - 58px);
+}
+
+#search-but {
+	cursor: pointer;
+}
+
+#search-but, #search-input {
+	padding: 4px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	outline: none;
+	font-size: 0.7em;
+	background-color: #fff;
+}
+
+#search-but:hover, #search-input:focus {
+	border-color: #55a9ff;
+}
+
+h2 {
+	font-size: 18px;
 }
