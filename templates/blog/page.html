@@ -22,6 +22,8 @@
 		<div class="related">
 			<p>作者：<span itemprop="author">{{ page.extra.author | default(value="Rustacean") }}</span>
 				{% if page.extra.translator %}, 译者：<span itemprop="translator">{{ page.extra.translator | default(value="rust-lang-cn") }}</span>{% endif %}，共 <span itemprop="wordCount">{{ page.word_count }}</span> 字<br>
+				{% if page.extra.english_url %}英文原文：<a href="{{ page.extra.english_url | safe }}">{{ page.extra.english_url | safe }}</a><br>{% endif %}
+				{% if page.extra.translate_tool %}{{ page.extra.translate_tool | safe }}<br>{% endif %}
 				{% if page.taxonomies.categories -%}
 					分类：{% for category in page.taxonomies.categories -%}{% if category_flag %}，{% endif %}<span itemprop="articleSection"><a href="{{ get_taxonomy_url(kind='categories', name=category) | safe }}">{{ category }}</a></span>{% set_global category_flag = true %}{%- endfor %}
 				{%- endif %}
