@@ -14,13 +14,13 @@ lead = "Rust 中文教程等相关资源列表"
 
 [[extra.docs]]
 title = "Rust 程序设计语言"
-content = "官方推出的学习 Rust 基本教程"
+content = "官方推出的学习 Rust 基本教程，最权威的 Rust 入门学习资料，是每个学习 Rust 语言必读的核心文档。"
 # url = "https://rustwiki.org/zh-CN/book"
 path = "zh-CN/book"
 
 [[extra.docs]]
 title = "通过例子学 Rust"
-content = "官方推出的学习 Rust 的例子教程"
+content = "官方推出的学习 Rust 的例子教程，快速掌握 Rust 的语言知识和应用，通过阅读和编写这些实例，能够快速上手和熟悉 Rust。"
 # url = "https://rustwiki.org/zh-CN/rust-by-example"
 path = "zh-CN/rust-by-example"
 
@@ -41,21 +41,21 @@ path = "zh-CN/cargo"
 
 [[extra.docs]]
 title = "Rust 规范文档"
-content = "Rust 中文资源的最全面的指南"
+content = "Rust 中文资源的最全面的指南，从 Rust 中文翻译项目组介绍和目标， Rust 中文组织管理，到 Rust 中文资源规范都给出了具体的规范指南。"
 path = "wiki"
 
 [[extra.docs]]
 title = "Rust 版本指南"
-content = "关于 Rust 的版本介绍，2018 版和未来的 2021 版和 2024 版"
+content = "关于 Rust 的版本介绍，2018 版和未来的 2021 版和 2024 版，了解 Rust 语言如何在大版本中确保 Rust 进行稳定地改革和前进。"
 path = "zh-CN/edition-guide"
 
 [[extra.docs]]
 title = "Rust 文档翻译指引"
-content = "翻译 Rust 文档的社区实践"
+content = "翻译 Rust 文档的社区实践，给出了开源翻译的一些良好做法，让更多翻译 Rust 的朋友能够顺畅地进行 Rust 资源中文本地化。"
 path = "wiki/translate/rust-translation-guide"
 
 [[extra.docs]]
 title = "Rust 语言术语中英文对照表"
-content = "Rust 术语翻译参考"
+content = "Rust 术语翻译参考，以 CC0 协议发布的公共作品，目的是为了确立起 Rust 的整个中文翻译的参考规范，保证 Rust 编程相关的中文表达保持一致性。"
 path = "wiki/translate/english-chinese-glossary-of-rust"
 +++

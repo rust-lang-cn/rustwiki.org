@@ -23,7 +23,7 @@
 </head>
 
 <body class="rustdoc">
-	<h1 class="title">Rust 官方文档中文翻译</h1>
+	<h1 class="title">{{ section.title }}</h1>
 	<p>欢迎来到 Rust 中文文档库，本文档库目标是将 <a href="https://www.rust-lang.org/">Rust 官方</a>
 		的所有的重要文档的翻译成中文文档，让所有的官方资料翻译版集中在一个地方呈现出来给所有的学习 Rust 的朋友。翻译的文档的版权跟随英文原文档的版权（英文版权通常为 <a
 			href="https://opensource.org/licenses/MIT">MIT 协议</a> 或 <a
@@ -49,20 +49,14 @@
 			语言术语中英文对照表》</a>规范了 Rust 术语的中英文翻译，保证 Rust 中文术语的一致性。所有参与翻译 Rust 官方文档或编写 Rust 书籍的朋友都应该仔细核对本表格，本表格将持续更新优化。此表格也对于已经阅读中文
 		Rust 书籍的朋友快速掌握 Rust 中出现的相关英文术语，从而更高效阅读英文的文档。对于表格中术语翻译不合理的内容，随时欢迎在 GitHub 上的本仓库上指出，我们会听取您宝贵的建议。</p>
 
-	<h1 id="learn-rust" class="section-header"><a href="#learn-rust">学习 Rust</a></h1>
-	<p>这里列出学习 Rust 的最重要的官方文档的翻译文档：</p>
-	<h2 id="the-rust-programming-language" class="section-header"><a href="#the-rust-programming-language">Rust 程序设计语言</a>
-	</h2>
-	<p><a href="{{ get_url(path="zh-CN/book") | safe }}">《Rust 程序设计语言》</a>为 Rust 官方的最基本的学习文档，英文名为 <a
-			href="https://doc.rust-lang.org/book/">“The Rust Programming
-			Language”</a> （也简称为&quot;the book&quot;）。这是最基础的文档，每个学习 Rust 的朋友都应该优秀阅读本文档，掌握官方给出的最权威的学习 Rust 的指导，熟悉 Rust 的基础用法及
-		Rust 的最佳实践。</p>
-	<h2 id="rust-by-example" class="section-header"><a href="#rust-by-example">通过例子学 Rust</a></h2>
-	<p><a href="{{ get_url(path="zh-CN/rust-by-example") | safe }}">《通过例子学 Rust》</a>（英文名为<a
-			href="https://doc.rust-lang.org/rust-by-example/">“Rust By Example”</a>，简称“RBE”） 以另一种方式来讲解 Rust 的入门学习，通过经典的例子讲解
-		Rust 的概念，同时提供大量练习来掌握此语言。</p>
-	<h2 id="rustlings" class="section-header"><a href="#rustlings">Rustlings</a></h2>
-	<p><a href="https://github.com/rust-lang-cn/rustlings-cn">Rustlings</a>是一份学习 Rust 的交互式练习工具，并提供一系列例子，教你阅读、调试和编写 Rust 的代码，并掌握 Rust 的基础语法知识。Rustlings 提供了区别于《通过例子学 Rust》的学习 Rust 的方式。</p>
+	<h1 id="{{ section.extra.learn.id }}" class="section-header"><a href="#{{ section.extra.learn.id }}">{{ section.extra.learn.title }}</a></h1>
+	<p>{{ section.extra.learn.content | safe }}</p>
+	{% if section.extra.learn.list %}
+	  {% for item in section.extra.learn.list %}
+	  	<h2 id="{{ item.id }}" class="section-header"><a href="#{{ item.id }}">{{ item.title }}</a></h2>
+		<p>{{ item.content | safe }}</p>
+	  {% endfor %}
+	{% endif %}
 
 	<h1 id="use-rust" class="section-header"><a href="#use-rust">使用 Rust</a></h1>
 	<p>在熟悉 Rust 语言后，日常使用 Rust 过程中将会经常用到以下资料，这里将各类重要的 Rust 文档归类，方便平时查用。</p>
@@ -70,13 +64,14 @@
 	<p><a href="{{ get_url(path="zh-CN/edition-guide") | safe }}">《Rust 版本指南》</a> （英文名为<a
 			href="https://doc.rust-lang.org/edition-guide/">“The Edition Guide”</a>）详细介绍了 Rust 版本有关的说明指南。</p>
 
-	<h1 id="more" class="section-header"><a href="#more">更多资料，待补充...</a></h1>
-	<p>Rust 官方提供了很多资料，详细见<a href="{{ get_url(path="wiki") | safe }}">《Rust 规范文档》</a>的介绍页，这些内容将陆续整理更新上来。</p>
+	<h1 id="more" class="section-header"><a href="#more">更多资料</a></h1>
+	<p>Rust Wiki 翻译了多份官方文档，也整理了来自其他译者的 Rust 相关资料，这些资料都在 Rust Wiki 的文档页列出来，详细见<a href="{{ get_url(path="docs") | safe }}">Rust 文档列表</a>，后续我们还会补充更多的 Rust 中文相关资源。</p>
+	<p>另外 Rust Wiki 还提供了 Rust 中文相关的规范指引，详细见<a href="{{ get_url(path="wiki") | safe }}">《Rust 规范文档》</a>的介绍页，我们会不断地完善 Rust 的相关指南内容。</p>
 
 	<footer>
 		<p>本站其他语言版本：
 			<a href="{{ get_url(path="en") | safe }}">English</a>，
-			<a href="{{ get_url(path="zh-CN") | safe }}">简体中文</a>
+			<a href="{{ config.base_url | safe }}">简体中文</a>
 		</p>
 	</footer>
 </body>

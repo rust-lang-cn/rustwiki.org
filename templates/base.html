@@ -2,7 +2,7 @@
 
 {%- block base -%}
 <!DOCTYPE html>
-<html lang="{{ config.extra.language_code | default(value=" en-US") }}">
+<html lang="{% block language %}{{ config.extra.language_code | default(value=" en-US") }}{% endblock language %}">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">

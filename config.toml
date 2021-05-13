@@ -66,8 +66,16 @@ name = "Wiki"
 path = "/wiki/"
 
 [[extra.footer]]
+name = "官方文档"
+path = "/zh-CN/"
+
+[[extra.footer]]
 name = "常见问题"
 path = "/faq/"
+
+[[extra.footer]]
+name = "Rust 官网"
+url = "https://www.rust-lang.org/zh-CN"
 
 [[extra.footer]]
 name = "GitHub"
@@ -88,6 +96,10 @@ url = "https://github.com/rust-lang-cn"
 
 
 # Footer
+[[extra.en.footer]]
+name = "Rust"
+url = "https://www.rust-lang.org"
+
 [[extra.en.footer]]
 name = "GitHub"
 url = "https://github.com/rust-lang-cn"

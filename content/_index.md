@@ -62,17 +62,20 @@ title = "Rust 版本指南"
 content = "了解 Rust 版本有关内容，比如初版（Rust 2015）和 Rust 2018 版，掌握如何迁移代码。"
 # url = "https://rustwiki.org/zh-CN/edition-guide/"
 path = "zh-CN/edition-guide"
-
-[[extra.other_items]]
-title = "Rust 语言术语中英文对照表"
-content = "Rust 中文翻译项目组提供，致力于实现 Rust 的文档和书籍中文的术语都保持一致性。"
-# url = "https://rustwiki.org/wiki/translate/english-chinese-glossary-of-rust"
-path = "wiki/translate/english-chinese-glossary-of-rust"
+icon = "ti-layers-alt"
 
 [[extra.other_items]]
 title = "Rust 规范文档"
 content = "Rust 中文资源和配套措施，相关翻译指引的范，以及中文翻译项目组的社区运作说明等。"
 # url = "https://rustwiki.org/wiki"
 path = "wiki"
+icon = "ti-ruler-pencil"
+
+[[extra.other_items]]
+title = "Rust 语言术语中英文对照表"
+content = "Rust 中文翻译项目组提供，致力于实现 Rust 的文档和书籍中文的术语都保持一致性。"
+# url = "https://rustwiki.org/wiki/translate/english-chinese-glossary-of-rust"
+path = "wiki/translate/english-chinese-glossary-of-rust"
+icon = "ti-world"
 
 +++
