@@ -9,7 +9,9 @@ id = "kube-faq"
 
 ## Rust Wiki 是什么网站？
 
-Rust Wiki 是非营利性的关于 Rust 教程的中文资源网，由 [Rust 中文翻译项目组][rust-lang-cn]创建。我们深受 Rust 开发团队的影响，Rust 开发团队以前所未有的开放形式开发出 Rust 语言，并给出了全面且规范的开源组织范例。正因于此，我们创立了 Rust Wiki 网，从而更好地将中文资源呈现给大家。我们的所有资源都以开源的形式提供，在 [GitHub][rust-lang-cn] 上均可以找到相关资源，包括[本网站的源码和文章][rustwiki]。
+Rust Wiki 是非营利性的关于 Rust 教程的中文资源网，由 [Rust 中文翻译项目组][rust-lang-cn]创建。我们深受 Rust 开发团队的影响，Rust 开发团队以前所未有的开放形式开发出 Rust 语言，并给出了全面且规范的开源组织范例。Rust 官方的网站还提供了一系列全面的文档，不过目前为止只有英文版。
+
+正因于此，我们创立了 Rust Wiki 网，也将各类纷繁复杂的资源收拢在一起，从而更好地将中文资源呈现给大家。就像 Rust 官方一样，在 Rust 的官网上就能找到重要的英文的 Rust 资源，Rust Wiki 也努力做到本站涵盖 Rust 中文的相关重要资源。我们的所有资源都以开源的形式提供，在 [GitHub][rust-lang-cn] 上均可以找到相关资源，包括[本网站的所有源码、文档和文章][rustwiki]，如无特别声明，本网站的源码和文章均遵循 [MIT 协议][mit]。
 
 本网站主要采用的是 Rust 相关的工具链完成:
 
@@ -25,6 +27,7 @@ Rust Wiki 是非营利性的关于 Rust 教程的中文资源网，由 [Rust 中
 [rust-logo]: https://github.com/rust-lang/rust-artwork
 [kube]: https://kube.elemnts.net/
 [zola-easydocs-theme]: https://www.getzola.org/themes/zola-easydocs-theme/
+[mit]: https://mit-license.org/
 
 ## Rust Wiki 的中文资源来源于哪里？
 
@@ -35,11 +38,16 @@ Rust Wiki 的中文教程等相关资源主要来源于两方面：
 
 我们遵循 “DRY”（Don't Repeat Yourself）原则，以减少不必要的重复劳动。一般来说，组织都会计划翻译 Rust 官方的作品，若是发现已经有别处给出了译作，我们将采用可取的作品，比如第二版的《Rust 程序设计语言》本组织也翻译了前几个章节，后面发现有更完整的翻译成品，所以本组织整合已有的资源而不再重新翻译，我们欢迎所有的 Rust 中文翻译作者加入翻译项目组。
 
-⚡️ 注意：Rust 中文翻译项目组的作品一般采用 MIT 或 Apache 2.0 协议，除非特定教程使用了其他不兼容的许可协议（如 GPL 和 CC BY-SA-4.0 等协议）。另外对于未指定开源协议或是以闭源形式公开的作品，我们项目组均不会采用。
+Rust 中文翻译项目组会不断收集和更新网上已有的开源的翻译文档，并将相关资源聚集到 [*rust-lang-cn*][rust-lang-cn] 的 GitHub 仓库上，且遵循原作者和译者的相关协议。我们的目标是将所有的公开的开源作品都无限制（比如 CC0 协议）或少数限制（比如 MIT、GPL 等协议）分享给全世界所有人。所有人都可以在遵循开源协议的条件下，获得所有这些开源资源，包括本网站的一切资源内容，甚至我们不反对将这些开源的资源全部复刻到自己的网站上，因为我们本来的目的就是让 Rust 的中文资源能更广泛地传播。
+
+当然，为了让相关的资源良性发展和不断改进，我们鼓励大家将改进的内容反馈到原作者，当然也欢迎反馈到 [*rust-lang-cn*][rust-lang-cn] 的有关资源内容，[*rust-lang-cn*] 组织也对所有人开放。
+
+⚡️ 注意：Rust 中文翻译项目组的作品一般采用 MIT 或 Apache 2.0 协议，除非特定教程使用了其他不兼容的许可协议（如 GPL 和 CC BY-SA-4.0 等协议）。另外对于以指定禁止转载或闭源形式公开的作品，我们项目组不会采用。
 
 [rbe]: https://rustwiki.org/zh-CN/rust-by-example
 [edition-guide]: https://rustwiki.org/zh-CN/edition-guide
 [book]: https://rustwiki.org/zh-CN/book
+[rust-lang-cn]: https://github.com/rust-lang-cn
 
 ## Rust 中文项目组有什么目标和计划？
 
