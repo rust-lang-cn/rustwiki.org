@@ -17,6 +17,9 @@
 
 	<link rel="icon" href="{{ get_url(path="img/favicon.ico") | safe }}">
 	<link href="{{ get_url(path="css/main.css") | safe }}" rel="stylesheet" type="text/css">
+	{% if config.generate_feed %}
+    <link type="application/atom+xml" rel="alternate" href="{{ get_url(path=config.feed_filename | default(value="atom.xml")) | safe }}" title="{{ config.title | default(value="Rust Wiki") }}" />
+    {% endif %}
 </head>
 <body class="page-kube">
 {% block header -%}

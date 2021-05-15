@@ -17,6 +17,7 @@ title = "Rust 程序设计语言"
 content = "官方推出的学习 Rust 基本教程，最权威的 Rust 入门学习资料，是每个学习 Rust 语言必读的核心文档。"
 # url = "https://rustwiki.org/zh-CN/book"
 path = "zh-CN/book"
+page_path = "docs/book"
 
 [[extra.docs]]
 title = "通过例子学 Rust"

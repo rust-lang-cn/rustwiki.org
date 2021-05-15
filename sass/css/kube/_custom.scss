@@ -9,3 +9,37 @@
     text-decoration: none;
   }
 }
+
+#components .doc-item {
+  padding-bottom: 20px;
+
+  h4 a {
+    font-size: 1.2em;
+  }
+
+  p a {
+    font-size: 1.1em;
+    color: #333;
+    text-decoration: none;
+  }
+  h5 {
+    padding-bottom: 0em;
+
+    a {
+      font-size: 0.9em;
+      font-weight: normal;
+      text-decoration: none;
+      color: #666;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  #content, #kube-faq {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

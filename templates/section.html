@@ -12,9 +12,13 @@
 			<div class="row gutters">
 				{% if section.extra.docs %}
 					{% for doc in section.extra.docs %}
-						<div class="col col-4 item">
-							<h4><a href="{{ doc.url | default(value=get_url(path=doc.path | default(value="docs") | safe) | safe) | safe }}">{{ doc.title | safe }}</a></h4>
-							<p>{{ doc.content | safe }}</p>
+						<div class="col col-4 item doc-item">
+							<h4><a href="{{ doc.url | default(value=get_url(path=doc.path | default(value="docs") | safe) | safe) | safe }}" title="{{ doc.title }}">{{ doc.title | safe }}</a></h4>
+							<p><a href="{{ doc.url | default(value=get_url(path=doc.path | default(value="docs") | safe) | safe) | safe }}" title="{{ doc.title }}">{{ doc.content | safe }}</a></p>
+							<h5>
+							  <a href="{{ doc.url | default(value=get_url(path=doc.path | default(value="docs") | safe) | safe) | safe }}" title="马上阅读 {{ doc.title }}">📖 立即阅读</a>
+							  {% if doc.page_path %}<a href="{{ get_url(path=doc.page_path) | safe }}" title="{{ doc.title }}介绍页">👉 查看介绍</a>{% endif %}
+							</h5>
 						</div>
 					{% endfor %}
 				{% endif %}
