@@ -1,5 +1,10 @@
 # rustwiki.org
 
+[![LICENSE-MIT](https://img.shields.io/badge/license-MIT-green)](https://raw.githubusercontent.com/rust-lang-cn/rust-by-example-cn/master/LICENSE-MIT)
+[![LICENSE-APACHE](https://img.shields.io/badge/license-Apache%202-blue)](https://raw.githubusercontent.com/rust-lang-cn/rust-by-example-cn/master/LICENSE-APACHE)
+![GitHub last commit](https://img.shields.io/github/last-commit/rust-lang-cn/rustwiki.org?color=gold)
+![rustwiki.org](https://img.shields.io/website?up_message=rustwiki.org&url=https%3A%2F%2Frustwiki.org)
+
 This is the source of the [rustwiki.org](https://rustwiki.org) website.
 
 ## Running and Building
