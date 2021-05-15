@@ -84,7 +84,7 @@ path = "/faq/"
 name = "Rust 官网"
 url = "https://www.rust-lang.org/zh-CN"
 
-[[extra.menu]]
+[[extra.footer]]
 name = "Rust 交流"
 url = "https://github.com/rust-lang-cn/rustwiki.org/discussions"
 
