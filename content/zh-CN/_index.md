@@ -11,12 +11,12 @@ id = "learn-rust"
 [[extra.learn.list]]
 title = "Rust 程序设计语言"
 id = "the-rust-programming-language"
-content = '<a href="zh-CN/book">《Rust 程序设计语言》</a>为 Rust 官方的最基本的学习文档，英文名为 <a href="https://doc.rust-lang.org/book/">“The Rust Programming Language”</a> （也简称为&quot;the book&quot;）。这是最基础的文档，每个学习 Rust 的朋友都应该优秀阅读本文档，掌握官方给出的最权威的学习 Rust 的指导，熟悉 Rust 的基础用法及 Rust 的最佳实践。'
+content = '<a href="book">《Rust 程序设计语言》</a>为 Rust 官方的最基本的学习文档，英文名为 <a href="https://doc.rust-lang.org/book/">“The Rust Programming Language”</a> （也简称为&quot;the book&quot;）。这是最基础的文档，每个学习 Rust 的朋友都应该优秀阅读本文档，掌握官方给出的最权威的学习 Rust 的指导，熟悉 Rust 的基础用法及 Rust 的最佳实践。'
 
 [[extra.learn.list]]
 title = "通过例子学 Rust"
 id = "rust-by-example"
-content = '<a href="zh-CN/rust-by-example">《通过例子学 Rust》</a>（英文名为<a href="https://doc.rust-lang.org/rust-by-example/">“Rust By Example”</a>，简称“RBE”） 以另一种方式来讲解 Rust 的入门学习，通过经典的例子讲解 Rust 的概念，同时提供大量练习来掌握此语言。'
+content = '<a href="rust-by-example">《通过例子学 Rust》</a>（英文名为<a href="https://doc.rust-lang.org/rust-by-example/">“Rust By Example”</a>，简称“RBE”） 以另一种方式来讲解 Rust 的入门学习，通过经典的例子讲解 Rust 的概念，同时提供大量练习来掌握此语言。'
 
 [[extra.learn.list]]
 title = "Rustlings（Rust 小练习）"
