@@ -13,7 +13,7 @@ tags = ["Rust"]
 author = "Rust 小组"
 translator = "Aaran Xu"
 translate_tool = '自豪地采用 <a href="https://translate.google.cn">Google 翻译</a>'
-english_title = "The Plan for the Rust 2021 Edition"
+english_title = "Six Years of Rust"
 english_url = "https://blog.rust-lang.org/2021/05/15/six-years-of-rust.html"
 release = true
 +++
