@@ -1,5 +1,5 @@
 +++
-title = "Rust 发布六年"
+title = "Rust 发布六周年"
 description = "今天是 Rust 发布的 6 周年，随着 2015 年发布 1.0 版本以来，已经走过 6 年，Rust 变得越来越强大，也越来越好用，已经很多生产环境使用了 Rust 编程语言。Rust 连续多年成为最受欢迎的编程语言，而且得到了 Google、微软、Facebook 等大型公司和项目的支持。未来 Rust 将会做得更好，Rust 值得每个人尝试和使用。"
 date = 2021-05-15T14:36:26-04:00
 template = "blog/page.html"
