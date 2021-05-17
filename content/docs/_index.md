@@ -18,45 +18,64 @@ content = "官方推出的学习 Rust 基本教程，最权威的 Rust 入门学
 # url = "https://rustwiki.org/zh-CN/book"
 path = "zh-CN/book"
 page_path = "docs/book"
+rust_done = true
+repo = "https://github.com/rust-lang-cn/book-cn/fork"
 
 [[extra.docs]]
 title = "通过例子学 Rust"
 content = "官方推出的学习 Rust 的例子教程，快速掌握 Rust 的语言知识和应用，通过阅读和编写这些实例，能够快速上手和熟悉 Rust。"
-# url = "https://rustwiki.org/zh-CN/rust-by-example"
+# url = "https://rustwiki.org/zh-CN/rust-by-example/"
 path = "zh-CN/rust-by-example"
+rust_done = true
+repo = "https://github.com/rust-lang-cn/rust-by-example-cn/fork"
 
 [[extra.docs]]
 title = "Rust 参考手册"
 content = "官方的 Rust 语言规范，涵盖 Rust 的最全面的规范内容，目前文档还未稳定，属于预览版。"
 path = "zh-CN/reference"
+rust_done = true
+repo = "https://github.com/rust-lang-cn/reference-cn/fork"
 
 [[extra.docs]]
 title = "Rust Cookbook"
 content = "Rust 官方图书，由一系列简单程序示例构成，展示了 Rust 实际开发场景的良好实践。"
 path = "zh-CN/rust-cookbook"
+rust_doing = true
+repo = "https://github.com/rust-lang-cn/rust-cookbook-cn/fork"
 
 [[extra.docs]]
 title = "Cargo 手册"
 content = "Cargo 是 Rust 的包管理器，通过本手册全面了解如何构建 Rust 程序和大型项目。"
 path = "zh-CN/cargo"
+rust_doing = true
+repo = "https://github.com/rust-lang-cn/cargo-cn/fork"
 
 [[extra.docs]]
 title = "Rust 规范文档"
 content = "Rust 中文资源的最全面的指南，从 Rust 中文翻译项目组介绍和目标， Rust 中文组织管理，到 Rust 中文资源规范都给出了具体的规范指南。"
 path = "wiki"
+rustwiki_doc = true
+repo = "https://github.com/rust-lang-cn/rustwiki.org/fork"
 
 [[extra.docs]]
 title = "Rust 版本指南"
 content = "关于 Rust 的版本介绍，2018 版和未来的 2021 版和 2024 版，了解 Rust 语言如何在大版本中确保 Rust 进行稳定地改革和前进。"
 path = "zh-CN/edition-guide"
+rust_done = true
+repo = "https://github.com/rust-lang-cn/edition-guide-cn/fork"
 
 [[extra.docs]]
 title = "Rust 文档翻译指引"
 content = "翻译 Rust 文档的社区实践，给出了开源翻译的一些良好做法，让更多翻译 Rust 的朋友能够顺畅地进行 Rust 资源中文本地化。"
 path = "wiki/translate/rust-translation-guide"
+rustwiki_doc = true
+repo = "https://github.com/rust-lang-cn/rust-translation-guide/fork"
 
 [[extra.docs]]
 title = "Rust 语言术语中英文对照表"
 content = "Rust 术语翻译参考，以 CC0 协议发布的公共作品，目的是为了确立起 Rust 的整个中文翻译的参考规范，保证 Rust 编程相关的中文表达保持一致性。"
 path = "wiki/translate/english-chinese-glossary-of-rust"
+rustwiki_doc = true
+repo = "https://github.com/rust-lang-cn/english-chinese-glossary-of-rust/fork"
+
 +++

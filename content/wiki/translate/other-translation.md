@@ -13,7 +13,6 @@ aliases = ["zh-CN/rust-wiki/translate/other-translation.html"]
 - 正确翻译：Rust 程序设计语言
 - 不推荐翻译：Rust 编程语言
 
-
 “The X Programming Language” 这样的表达在国内的标准译法是： X 程序设计语言。这在出版物中都已是公认的译法，比如：
 
 - K&R的 The C Programming Language 为《C 程序设计语言》，
@@ -24,18 +23,17 @@ aliases = ["zh-CN/rust-wiki/translate/other-translation.html"]
 
 *The X Programming Language* 一般都是该语言的发明人或团队所出图书，通常被人称为 X 语言的圣经（Bible），在美国一般人出书也不敢冒用此书名，在国内的《X 程序设计语言》书名也一般是留给 X 语言的译作的。*The Rust Programming Language* 也一样在官方就叫此名，我们翻译书名时也应遵循官方的书名命名。
 
-
 本段文字首次编辑在：<https://github.com/KaiserY/rust-book-chinese/issues/119>
 
 ### Rustacean
 
 Rustacean（复试形式为 Rustaceans）中文意思为 Rust 开发者，Rust 用户，Rust 爱好者，本词一般不译，直接取原文。
 
-注意 Rust 开发者不要写成 *Ruster*，另外本单词第一个字母为大写形式，就和 Rust 一样。
+Rustacean 来源于单词 crustacean，后者意思为：甲壳纲动物（如蟹、龙虾）。
 
-> 参见：
->
-> [Rustacean 的维基字典解释](https://en.wiktionary.org/wiki/Rustacean)
+注意 Rust 开发者不要写成 *Ruster*，另外 Rustacean 一般第一个字母为大写形式，就和 Rust 一样。
+
+> 参见：[Rustacean 的维基字典解释](https://en.wiktionary.org/wiki/Rustacean)
 
 ### you 的翻译
 

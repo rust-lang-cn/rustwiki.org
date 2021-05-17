@@ -25,6 +25,16 @@
 					</figure>
 					<a href="{{ item.url | default(value=item.path | default(value=" /") | safe) | safe }}">
 						<h3>{{ item.title }}</h3>
+						<p>
+              {%- if item.translate_done -%}
+						    {% include "svg/chinese-100-percent.html" %}
+						    {% include "svg/localized-100-percent.html" %}
+              {% elif item.is_wiki -%}
+                {% include "svg/docs-wiki.html" %}
+              {% elif item.is_doing -%}
+                {% include "svg/doing-translation.html" %}
+						  {%- endif -%}
+            </p>
 						<p>{{ item.content | safe }}</p>
 					</a>
 					</div>
@@ -47,6 +57,16 @@
 						{% endif %}
 						<a href="{{ item.url | default(value=item.path | default(value=" /") | safe) | safe }}">
 							<h4>{{ item.title }}</h4>
+						  <p>
+                {%- if item.translate_done -%}
+                  {% include "svg/chinese-100-percent.html" %}
+                  {% include "svg/localized-100-percent.html" %}
+                {% elif item.is_wiki -%}
+                  {% include "svg/docs-wiki.html" %}
+                {% elif item.is_doing -%}
+                  {% include "svg/doing-translation.html" %}
+                {%- endif -%}
+              </p>
 							<p>{{ item.content | safe}}</p>
 						</a>						
 					</div>

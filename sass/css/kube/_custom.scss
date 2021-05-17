@@ -11,6 +11,7 @@
 }
 
 #components .doc-item {
+  padding-top: 20px;
   padding-bottom: 20px;
 
   h4 a {
@@ -41,5 +42,19 @@
   #content, #kube-faq {
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+
+.docs-badge {
+  display: flex;
+
+  .badge-left {
+    padding-left: 0px;
+    padding-right: 10px;
+  }
+
+  .badge-right {
+    padding-left: 5px;
+    padding-right: 10px;
   }
 }

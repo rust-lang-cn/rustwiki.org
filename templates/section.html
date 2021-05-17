@@ -13,11 +13,40 @@
 				{% if section.extra.docs %}
 					{% for doc in section.extra.docs %}
 						<div class="col col-4 item doc-item">
+              <ul class="docs-badge">
+                <li class="badge-left">
+                  <a href="{% if doc.rust_en %}{{ doc.en_url | default(value='https://doc.rust-lang.org/book') | safe }}{% else %}{{ doc.url | default(value=get_url(path=doc.path | default(value="docs") | safe) | safe) | safe }}{% endif %}" title="{{ doc.title }}">
+                  {%- if doc.rust_done -%}
+                    {% include "svg/rust-100-percent.html" -%}
+                  {% elif doc.rust_doing -%}
+                    {% include "svg/rust-doing.html" -%}
+                  {% elif doc.rust_en -%}
+                    {% include "svg/rust-en.html" -%}
+                  {% else -%}
+                    {% include "svg/rustwiki-doc.html" -%}
+                  {% endif -%}
+                  </a>
+                </li>
+                <li class="badge-right">
+                  {%- if doc.rust_en -%}
+                    <a href="{{ doc.repo | default(value='https://github.com/rust-lang/rust/fork') | safe }}" title="Fork me on {{ doc.title }}">
+                    {%- include "svg/rust-en-fork.html" -%}
+                  {% else -%}
+                    <a href="{{ doc.repo | default(value='https://github.com/rust-lang-cn/rustwiki.org') | safe }}" title="{{ doc.title }} 的 GitHub 仓库地址">
+                    {%- include "svg/github-fork.html" -%}
+                  {%- endif -%}
+                  </a>
+                </li>
+              </ul>
 							<h4><a href="{{ doc.url | default(value=get_url(path=doc.path | default(value="docs") | safe) | safe) | safe }}" title="{{ doc.title }}">{{ doc.title | safe }}</a></h4>
 							<p><a href="{{ doc.url | default(value=get_url(path=doc.path | default(value="docs") | safe) | safe) | safe }}" title="{{ doc.title }}">{{ doc.content | safe }}</a></p>
 							<h5>
-							  <a href="{{ doc.url | default(value=get_url(path=doc.path | default(value="docs") | safe) | safe) | safe }}" title="马上阅读 {{ doc.title }}">📖 立即阅读</a>
-							  {% if doc.page_path %}<a href="{{ get_url(path=doc.page_path) | safe }}" title="{{ doc.title }}介绍页">👉 查看介绍</a>{% endif %}
+                {% if doc.rust_en %}
+                  <a href="{{ doc.url | default(value=get_url(path=doc.path | default(value="docs") | safe) | safe) | safe }}" title="Read {{ doc.title }}">📖 Getting Started</a>
+                {% else %}
+							    <a href="{{ doc.url | default(value=get_url(path=doc.path | default(value="docs") | safe) | safe) | safe }}" title="马上阅读 {{ doc.title }}">📖 立即阅读</a>
+							    {% if doc.page_path %}<a href="{{ get_url(path=doc.page_path) | safe }}" title="{{ doc.title }}介绍页">👉 查看介绍</a>{% endif %}
+                {% endif %}
 							</h5>
 						</div>
 					{% endfor %}
