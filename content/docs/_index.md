@@ -20,6 +20,7 @@ path = "zh-CN/book"
 page_path = "docs/book"
 rust_done = true
 repo = "https://github.com/rust-lang-cn/book-cn/fork"
+is_hot = true
 
 [[extra.docs]]
 title = "通过例子学 Rust"
@@ -28,6 +29,7 @@ content = "官方推出的学习 Rust 的例子教程，快速掌握 Rust 的语
 path = "zh-CN/rust-by-example"
 rust_done = true
 repo = "https://github.com/rust-lang-cn/rust-by-example-cn/fork"
+is_hot = true
 
 [[extra.docs]]
 title = "Rust 参考手册"

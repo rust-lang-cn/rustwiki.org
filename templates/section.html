@@ -38,7 +38,7 @@
                   </a>
                 </li>
               </ul>
-							<h4><a href="{{ doc.url | default(value=get_url(path=doc.path | default(value="docs") | safe) | safe) | safe }}" title="{{ doc.title }}">{{ doc.title | safe }}</a></h4>
+							<h4><a href="{{ doc.url | default(value=get_url(path=doc.path | default(value="docs") | safe) | safe) | safe }}" title="{{ doc.title }}">{% if doc.is_hot %}🔥 {% endif %}{{ doc.title | safe }}</a></h4>
 							<p><a href="{{ doc.url | default(value=get_url(path=doc.path | default(value="docs") | safe) | safe) | safe }}" title="{{ doc.title }}">{{ doc.content | safe }}</a></p>
 							<h5>
                 {% if doc.rust_en %}
