@@ -1,8 +1,11 @@
+{%- extends "base.html" -%}
+
+{% block base %}
 <!DOCTYPE html>
 <html>
 <head>
-<title>{{ page.title }} | {{ config.title }}</title>
 <meta charset="utf-8">
+{% include "partials/seo.html" %}
 <link rel="icon" href="{{ get_url(path="img/favicon.ico") | safe }}">
 <!-- Include rust.css after light.css so its rules take priority. -->
 <link rel="stylesheet" type="text/css" href="{{ get_url(path="css/light1.52.0.css") | safe }}"/>
@@ -13422,3 +13425,4 @@ onEach(document.getElementsByClassName('rust-example-rendered'), function(e) {
 </script>
 </body>
 </html>
+{% endblock base %}

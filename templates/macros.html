@@ -90,8 +90,10 @@
 <meta property="og:url" content="{{ site_url | safe }}">
 {% endif %}
 
-{% if config.title %}
-<meta property="og:site_name" content="{{ config.title }}" />
+{% if page.extra.lang and page.extra.lang == "en" or section.extra.lang and section.extra.lang == "en" -%}
+  <meta property="og:site_name" content="{{ config.extra.en.title }}" />
+{% elif config.title %}
+  <meta property="og:site_name" content="{{ config.title }}" />
 {% endif %}
 
 {% if image %}

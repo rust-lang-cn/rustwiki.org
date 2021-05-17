@@ -2,8 +2,8 @@
 base_url = "https://rustwiki.org"
 
 # The basic information
-title = "Rust Wiki"
-description = "Rust Wiki 是 Rust 官方文档中文翻译项目组创建的 Rust 文档在线知识库，涵盖了最全面的 Rust 的中文学习内容和编程入门资料，包括 Rust 官方或非官方文档的中文翻译，以及 Rust 中文翻译项目组制定的 Rust 翻译规范及标准。"
+title = "Rust 文档网"
+description = "Rust 文档网是 Rust 官方文档中文翻译项目组创建的 Rust 文档在线知识库，涵盖了最全面的 Rust 的中文学习内容和编程入门资料，包括 Rust 官方或非官方文档的中文翻译，以及 Rust 中文翻译项目组制定的 Rust 翻译规范及标准。"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -99,6 +99,10 @@ path = "/en/"
 
 
 ################################ English Version ###############################
+
+[extra.en]
+title = "Rust Wiki"
+description = "The wiki documentation of the Rust programming language."
 
 # Header menus
 [[extra.en.menu]]

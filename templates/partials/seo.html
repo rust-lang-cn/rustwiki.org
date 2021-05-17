@@ -1,9 +1,16 @@
 {%- set site_url = current_url | default(value=get_url(path="404.html")) -%}
 {% set author = config.extra.author | default(value="") -%}
-{% set description = config.description | default(value="") -%}
 {% set image = config.extra.seo.image | default(value="") -%}
 {% set image_height = config.extra.seo.image_height | default(value=0) -%}
 {% set image_width = config.extra.seo.image_width | default(value=0) -%}
+
+{% if page.extra.lang and page.extra.lang == "en" or section.extra.lang and section.extra.lang == "en" -%}
+  {% set config_title = config.extra.en.title | default(value="en.extra.Rust Wiki") -%}
+  {% set description = config.en.extra.description | default(value="") -%}
+{% else -%}
+  {% set config_title = config.title | default(value="Rust 开源文档网") -%}
+  {% set description = config.description | default(value="") -%}
+{%- endif -%}
 
 {%- set is_homepage = false -%}
 {%- if current_url -%}
@@ -15,12 +22,12 @@
 {% endif -%}
 
 {% if is_homepage -%}
-  {% if config.title and section.title -%}
-  	{% set title = config.title ~ " - " ~ section.title -%}
+  {% if config_title and section.title -%}
+  	{% set title = config_title ~ " - " ~ section.title -%}
   {% elif section.title -%}
 		{% set title = section.title -%}
-  {% elif config.title -%}
-    {% set title = config.title -%}
+  {% elif config_title -%}
+    {% set title = config_title -%}
   {% else -%}
     {% set title = "" -%}
   {% endif -%}
@@ -38,12 +45,12 @@
 {%- elif page -%}
 	{%- set og_title = page.title -%}
 
-  {% if config.title and page.title -%}
-  	{% set title = page.title ~ " | " ~ config.title -%}
+  {% if config_title and page.title -%}
+  	{% set title = page.title ~ " | " ~ config_title -%}
   {% elif page.title -%}
 		{% set title = page.title -%}
-  {% elif config.title -%}
-    {% set title = config.title -%}
+  {% elif config_title -%}
+    {% set title = config_title -%}
   {% else -%}
     {% set title = "" -%}
   {% endif -%}
@@ -80,12 +87,12 @@
 {% elif section -%}
 	{% set og_title = section.title | default(value="Wiki") -%}
 
-  {% if config.title and section.title -%}
-  	{% set title = section.title ~ " | " ~ config.title -%}
+  {% if config_title and section.title -%}
+  	{% set title = section.title ~ " | " ~ config_title -%}
   {% elif section.title -%}
 		{% set title = section.title -%}
-  {% elif config.title -%}
-    {% set title = config.title -%}
+  {% elif config_title -%}
+    {% set title = config_title -%}
   {% else -%}
     {% set title = "" -%}
   {% endif -%}
@@ -103,8 +110,8 @@
 
   {% set og_title = tox -%}
 	
-  {% if config.title -%}
-    {% set title = tox ~ " | " ~ config.title -%}
+  {% if config_title -%}
+    {% set title = tox ~ " | " ~ config_title -%}
   {% else -%}
     {% set title = tox -%}
   {% endif -%}
@@ -116,8 +123,8 @@
 {% elif term -%}
   {%- set og_title = term.name -%}
 	
-  {% if config.title -%}
-    {% set title = term.name ~ " | " ~ config.title -%}
+  {% if config_title -%}
+    {% set title = term.name ~ " | " ~ config_title -%}
   {% else -%}
     {% set title = term.name -%}
   {% endif -%}
@@ -130,8 +137,8 @@
 	{%- set home = "404" -%}
   {% set og_title = home -%}
 
-  {% if config.title -%}
-  	{% set title = home ~ " | " ~ config.title -%}
+  {% if config_title -%}
+  	{% set title = home ~ " | " ~ config_title -%}
   {% else -%}
 	{% set title = home -%}
   {% endif -%}
