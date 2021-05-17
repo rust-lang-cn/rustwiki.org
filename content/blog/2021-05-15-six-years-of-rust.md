@@ -46,7 +46,7 @@ rustc 并不是唯一具有重大改进的工具。
 
 ## 生产环境中的 Rust
 
-每年，Rust 在社区和行业中的增长和采用都令人难以置信，过去的一年也不例外。2020年，Rust 再次被评为 StackOverflow 上[最受欢迎的编程语言[[stackoverflow]。感谢社区中的每个人的支持，并帮助 Rust 成为今天的样子。
+每年，Rust 在社区和行业中的增长和采用都令人难以置信，过去的一年也不例外。2020年，Rust 再次被评为 StackOverflow 上[最受欢迎的编程语言][stackoverflow]。感谢社区中的每个人的支持，并帮助 Rust 成为今天的样子。
 
 随着 Rust 基础的形成，Rust 处于建立可持续的开源生态系统的更好位置，使每个人都可以构建可靠而高效的软件。许多使用 Rust 的公司已经组建了专门致力于维护和改进 Rust 项目的团队，包括 [AWS](https://aws.amazon.com/blogs/opensource/how-our-aws-rust-team-will-contribute-to-rusts-future-successes/)，[Facebook](https://engineering.fb.com/2021/04/29/developer-tools/rust/) 和 Microsoft。
 
