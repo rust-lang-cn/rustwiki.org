@@ -67,6 +67,24 @@ rust_done = true
 repo = "https://github.com/rust-lang-cn/edition-guide-cn/fork"
 
 [[extra.docs]]
+title = "rustdoc 手册"
+content = "rustdoc 手册详细介绍了如何使用 rustdoc 命令或 cargo doc 来生成漂亮的 crate 文档，发布 crate 前很有必要熟悉 rustdoc 的相关内容。"
+path = "zh-CN/rustdoc"
+rust_doing = true
+
+[[extra.docs]]
+title = "rustc 手册"
+content = "Rust 拥有强大的编译功能，这是如何实现的呢？通过《rustc 手册》可以深入学习 rustc，了解 Rust 的有关编译选项，并掌握这些强大的编译能力。"
+path = "zh-CN/rustc"
+rust_doing = true
+
+[[extra.docs]]
+title = "Rust 编译错误索引表"
+content = "Rust 编译过程中经常出现一些错误，Rust 的这些错误表示什么意思呢？查看编译错误索引表可以快速找到详细具体的答案。"
+path = "zh-CN/error-index"
+rust_doing = true
+
+[[extra.docs]]
 title = "Rust 文档翻译指引"
 content = "翻译 Rust 文档的社区实践，给出了开源翻译的一些良好做法，让更多翻译 Rust 的朋友能够顺畅地进行 Rust 资源中文本地化。"
 path = "wiki/translate/rust-translation-guide"

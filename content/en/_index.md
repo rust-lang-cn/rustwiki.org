@@ -50,7 +50,15 @@ en_url = "https://doc.rust-lang.org/edition-guide/"
 repo = "https://github.com/rust-lang/edition-guide/fork"
 
 [[extra.docs]]
-title = "The Rustc Book"
+title = "The rustdoc Book"
+content = "The standard Rust distribution ships with a tool called rustdoc. Its job is to generate documentation for Rust projects. On a fundamental level, Rustdoc takes as an argument either a crate root or a Markdown file, and produces HTML, CSS, and JavaScript."
+url = "https://doc.rust-lang.org/rustdoc/"
+rust_en = true
+en_url = "https://doc.rust-lang.org/rustdoc/"
+repo = "https://github.com/rust-lang/rust/tree/master/src/doc/rustdoc"
+
+[[extra.docs]]
+title = "The rustc Book"
 content = "Welcome to \"The rustc book\"! rustc is the compiler for the Rust programming language, provided by the project itself."
 url = "https://doc.rust-lang.org/rustc/"
 rust_en = true

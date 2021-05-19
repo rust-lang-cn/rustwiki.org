@@ -72,6 +72,27 @@ icon = "ti-layers-alt"
 translate_done = true
 
 [[extra.other_items]]
+title = "rustdoc 手册"
+content = "学习 rustdoc 命令和使用 cargo doc 来生成漂亮的 Rust crate 的帮助文档，更好地管理和上传项目 API 文档。"
+path = "zh-CN/rustdoc"
+icon = "ti-control-shuffle"
+is_doing = true
+
+[[extra.other_items]]
+title = "rustc 手册"
+content = "深入学习 rustc 命令行，熟悉 Rust 编译器的可用选项，构建强大的 Rust 程序。"
+path = "zh-CN/rustc"
+icon = "ti-vector"
+is_doing = true
+
+[[extra.other_items]]
+title = "Rust 编译错误索引表"
+content = "和 Rust 打交道避免不了编译错误，通过编译错误索引表可以快速找到错误的详细说明和介绍，深入理解 Rust 的报错机理。"
+path = "zh-CN/error-index"
+icon = "ti-alert"
+is_doing = true
+
+[[extra.other_items]]
 title = "Rust 规范文档"
 content = "Rust 中文资源和配套措施，相关翻译指引的范，以及中文翻译项目组的社区运作说明等。"
 # url = "https://rustwiki.org/wiki"
