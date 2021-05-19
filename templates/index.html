@@ -13,6 +13,10 @@
 			<a class="button outline big" href="{{ section.extra.button.outline_url | default(value=get_url(path=section.extra.button.outline_path | default(value="/") | safe) | safe) | safe }}">{{ section.extra.button.outline }}</a>
 			<p>{{ section.extra.button.content | safe }}</p>
 		</div>
+		<div class="message focus" data-component="message"> <span class="close small"></span>
+			<a class="button inverted small " href="https://rustwiki.org">Rust 文档网</a> 由 <a
+				href="https://github.com/rust-lang-cn">Rust 中文翻译项目组</a> 创建和更新，全网独家支持 Rust 文档 <mark>中英双语切换</mark>，提供最友好的阅读和学习 Rust 的方式，正式开启 Rust 学习之旅吧！
+		</div>
 		<div id="kube-features">
 			{% if section.extra.items %}
 				{% for item in section.extra.items %}
