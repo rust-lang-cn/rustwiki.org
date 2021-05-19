@@ -42,7 +42,7 @@ repo = "https://github.com/rust-lang-cn/reference-cn/fork"
 title = "Rust Cookbook"
 content = "Rust 官方图书，由一系列简单程序示例构成，展示了 Rust 实际开发场景的良好实践。"
 path = "zh-CN/rust-cookbook"
-rust_doing = true
+rust_done = true
 repo = "https://github.com/rust-lang-cn/rust-cookbook-cn/fork"
 
 [[extra.docs]]

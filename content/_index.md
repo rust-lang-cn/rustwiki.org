@@ -53,7 +53,7 @@ title = "Rust Cookbook"
 content = "Rust 官方图书，由一系列简单程序示例构成，展示了 Rust 实际开发场景的良好实践。"
 path = "zh-CN/rust-cookbook"
 icon = "ti-key"
-is_doing = true
+translate_done = true
 
 [[extra.items]]
 title = "Cargo 手册"
