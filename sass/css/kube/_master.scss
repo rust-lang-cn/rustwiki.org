@@ -869,14 +869,14 @@ body.page-account #hero {
   #kube-features .item {
     padding: 0 24px; }
 
-#kube-faq {
+#kube-faq, #kube-about {
   max-width: 740px;
   margin: auto;
   font-size: 17px;
   line-height: 28px;
   margin-bottom: 104px;
   border-top: 1px solid rgba(0, 0, 0, 0.07); }
-  #kube-faq h2 {
+  #kube-faq h2, #kube-about h2 {
     font-size: 24px;
     font-weight: 900;
     text-align: center;

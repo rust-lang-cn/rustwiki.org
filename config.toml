@@ -51,16 +51,20 @@ name = "博客"
 path = "/blog/"
 
 [[extra.menu]]
-name = "常见问题"
-path = "/faq/"
-
-[[extra.menu]]
 name = "Rust 编程交流"
 url = "https://github.com/rust-lang-cn/rustwiki.org/discussions"
 
 [[extra.menu]]
 name = "GitHub"
 url = "https://github.com/rust-lang-cn"
+
+[[extra.menu]]
+name = "常见问题"
+path = "/faq/"
+
+[[extra.menu]]
+name = "关于我们"
+path = "/about/"
 
 
 # Footer
