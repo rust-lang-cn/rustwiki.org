@@ -85,6 +85,10 @@ name = "常见问题"
 path = "/faq/"
 
 [[extra.footer]]
+name = "关于我们"
+path = "/about/"
+
+[[extra.footer]]
 name = "Rust 官网"
 url = "https://www.rust-lang.org/zh-CN"
 

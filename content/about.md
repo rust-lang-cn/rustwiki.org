@@ -39,3 +39,10 @@ Rust 中文项目组官网的域名为 *rustwiki.org*，服务器目前采用 *V
 
 [rust-lang-cn]: https://github.com/rust-lang-cn
 [aaranxu]: https://github.com/aaranxu
+
+## 加入我们
+
+Rust 中文项目组是一个开放的组织，我们欢迎每一个热爱 Rust 的人加入，并一起朝着组织的目标一步步完善 Rust 的中文知识库。加入组织前，请确保已经注册了 [GitHub][github] 账号并熟悉 Git 工具，因为我们的资料内容均采用 Git 工具和 GitHub 托管平台来进行编写。注册 GitHub 账号后，可在 [*rustwiki.org* 讨论区][rustwiki-discussions] 发起加入组织的申请内容，我们将对发起人确认并添加进组织。 
+
+[github]: https://github.com
+[rustwiki-discussions]: https://github.com/rust-lang-cn/rustwiki.org/discussions
