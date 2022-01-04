@@ -1,6 +1,6 @@
 +++
 title = "Rust 规范文档"
-description = "Rust 规范文档包涵了一系列 Rust 有关的资料，包括翻译的指引、Rust 术语表以及 Rust 配套的其他资料（比如 TOML 语言介绍）。"
+description = "Rust 规范文档包涵了一系列 Rust 编程语言有关的资料，包括翻译的指引、Rust 术语表以及 Rust 配套的其他资料（比如 TOML 语言介绍）。"
 template = "wiki/section.html"
 
 aliases = ["zh-CN/rust-wiki/"]
