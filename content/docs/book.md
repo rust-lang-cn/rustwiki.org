@@ -10,7 +10,7 @@ lead = "《Rust 程序设计语言》是官方最权威的入门资料和学习�
 
 ## 简介
 
-《Rust 程序设计语言》（*The Rust Programming Language*）是 Rust 官方推出的正式教程，也是对 Rust 稳定版最基础和全面的指导指南，是每个学习 Rust 的不必备教程。作为 Rust 官方最重要和权威的书籍，本书一直是 Rust 重点维护的书籍，Rust 团队中由两名成员（[Steve Klabnik][steve-klabnik] 和 [Carol Nichols][carol-nichols]）专门来撰写和维护本书，还有众多开源社区的人一起参与贡献，包括提供内容和错误修复等。可以书《Rust 程序设计语言》就跟 Rust 语言本身一样，是整个 Rust 开源社区的结晶作品。
+《Rust 程序设计语言》（*The Rust Programming Language*）是 Rust 官方推出的正式教程，也是对 Rust 稳定版最基础和全面的指导指南，是每个学习 Rust 的必备教程。作为 Rust 官方最重要和权威的书籍，本书一直是 Rust 重点维护的书籍，Rust 团队中由两名成员（[Steve Klabnik][steve-klabnik] 和 [Carol Nichols][carol-nichols]）专门来撰写和维护本书，还有众多开源社区的人一起参与贡献，包括提供内容和错误修复等。可以书《Rust 程序设计语言》就跟 Rust 语言本身一样，是整个 Rust 开源社区的结晶作品。
 
 [steve-klabnik]: https://github.com/steveklabnik
 [carol-nichols]: https://github.com/carols10cents
