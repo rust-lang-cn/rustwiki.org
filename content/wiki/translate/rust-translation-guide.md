@@ -10,7 +10,6 @@ aliases = ["zh-CN/rust-wiki/translate/rust-translation-guide.html"]
 >
 > 本文来自 [Rust 文档翻译指引](https://github.com/rust-lang-cn/rust-translation-guide)仓库，本文收录在此处，只是方便 Rust 学习者统一查阅，若是发现有任何错误或需要完善地方，请在原仓库指出或修改错误。
 
-
 本文给出翻译 Rust 官方相关文档的一些建议和具体指导操作，内容由 [rust-lang-cn](https://github.com/rust-lang-cn) 项目组编写，如有不合理或错误的地方，随时欢迎指出纠正，谢谢！
 
 ## 中文翻译宗旨
@@ -90,6 +89,10 @@ Rust 的相关文档主要以网页的形式呈现出来，为了让翻译后文
 - 翻译后内容注意语句通顺，符合中文语言习惯，比如英文中特别喜欢用 “You” 来承上启下，但中文不一定出现 “你” 这个人称（可考虑去掉人称代词）
 - 对专有名词或 Rust 术语，建议在翻译中文词汇后面加上英文词汇，用小括号括起来
 - 对英文表述暂时无法翻译清晰的语句，建议在括号后面加上原英文句子。
+
+## 翻译工具
+
+DeepL: <https://www.deepl.com/translator>
 
 ## 翻译流程
 
