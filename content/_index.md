@@ -49,13 +49,20 @@ icon = "ti-book"
 translate_done = true
 
 [[extra.items]]
+title = "Rust 标准库"
+content = "官方的 Rust 标准库，是可移植 Rust 软件的基础，标准库文档是开发过程中的必备内容。"
+path = "zh-CN/std"
+icon = "ti-package"
+translate_done = true
+
+[[extra.items]]
 title = "Rust Cookbook"
 content = "Rust 官方图书，由一系列简单程序示例构成，展示了 Rust 实际开发场景的良好实践。"
 path = "zh-CN/rust-cookbook"
 icon = "ti-key"
 translate_done = true
 
-[[extra.items]]
+[[extra.other_items]]
 title = "Cargo 手册"
 content = "Cargo 是 Rust 的包管理器，通过本手册全面了解如何构建 Rust 程序和大型项目。"
 path = "zh-CN/cargo"

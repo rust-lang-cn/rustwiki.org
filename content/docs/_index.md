@@ -32,6 +32,14 @@ repo = "https://github.com/rust-lang-cn/rust-by-example-cn/fork"
 is_hot = true
 
 [[extra.docs]]
+title = "Rust 标准库"
+content = "官方的 Rust 标准库，是可移植 Rust 软件的基础，标准库文档是开发过程中的必备内容。"
+path = "zh-CN/std"
+rust_done = true
+repo = "https://github.com/rust-lang-cn/std-cn/fork"
+is_hot = true
+
+[[extra.docs]]
 title = "Rust 参考手册"
 content = "官方的 Rust 语言规范，涵盖 Rust 的最全面的规范内容，目前文档还未稳定，属于预览版。"
 path = "zh-CN/reference"
