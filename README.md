@@ -1,5 +1,6 @@
 # rustwiki.org
 
+![Build Status](https://github.com/rust-lang-cn/rustwiki.org/workflows/CI/badge.svg)
 [![LICENSE-MIT](https://img.shields.io/badge/license-MIT-green)](https://raw.githubusercontent.com/rust-lang-cn/rust-by-example-cn/master/LICENSE-MIT)
 [![LICENSE-APACHE](https://img.shields.io/badge/license-Apache%202-blue)](https://raw.githubusercontent.com/rust-lang-cn/rust-by-example-cn/master/LICENSE-APACHE)
 ![GitHub last commit](https://img.shields.io/github/last-commit/rust-lang-cn/rustwiki.org?color=gold)
@@ -30,10 +31,10 @@ reporting errors or suggesting improvements. Just open an issue or pull request.
 
 rustwiki.og is licensed under either of
 
- * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or
-   http://www.apache.org/licenses/LICENSE-2.0)
- * MIT license ([LICENSE-MIT](LICENSE-MIT) or
-   http://opensource.org/licenses/MIT)
+- Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or
+   <http://www.apache.org/licenses/LICENSE-2.0>)
+- MIT license ([LICENSE-MIT](LICENSE-MIT) or
+   <http://opensource.org/licenses/MIT>)
 
 at your option.
 
