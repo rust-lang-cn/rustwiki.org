@@ -1,0 +1,36 @@
+name: CI
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    - name: Install Zola
+      run: |
+        mkdir bin
+        curl -sSL https://github.com/getzola/zola/releases/download/v0.15.3/zola-v0.15.3-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
+        echo "$(pwd)/bin" >> ${GITHUB_PATH}
+    - name: Report versions
+      run: |
+        zola -V
+    - name: Run tests
+      run: zola check
+    - name: Build HTML
+      run: zola build
+  
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Deploy to server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            ./tools/rust-deploy/rw-zola.sh -u >/dev/null 2>&1
