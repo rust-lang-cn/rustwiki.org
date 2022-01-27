@@ -15,8 +15,8 @@ jobs:
     - name: Report versions
       run: |
         zola -V
-    - name: Run tests
-      run: zola check
+    # - name: Check links
+    #   run: zola check
     - name: Build HTML
       run: zola build
   
