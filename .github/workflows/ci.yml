@@ -33,4 +33,4 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            ./tools/rust-deploy/rw-zola.sh -u
+            ./tools/rust-deploy/rw-zola.sh -u >/dev/null 2>&1
