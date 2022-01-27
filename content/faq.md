@@ -11,7 +11,7 @@ id = "kube-faq"
 
 Rust Wiki 的中文教程等相关资源主要来源于两方面：
 
-1. Rust Wiki 自身的组织，即 Rust 中文翻译项目组（[*rust-lang-cn*][rust-lang-cn]）完成的翻译作品，比如[《通过例子学 Rust》][rbe]和[《Rust 版本指南》][edition-guide]；
+1. Rust 文档网（Rust Wiki）的组织，即 Rust 中文翻译项目组（[*rust-lang-cn*][rust-lang-cn]）完成的翻译作品，比如[《通过例子学 Rust》][rbe]和[《Rust 版本指南》][edition-guide]；
 2. 源自组织外的 Rust 翻译作品，比如[《Rust 参考指南》][reference]。
 
 我们遵循 “DRY”（Don't Repeat Yourself）原则，以减少不必要的重复劳动。一般来说，组织都会计划翻译 Rust 官方的作品，若是发现已经有别处给出了译作，我们将采用可取的作品，比如第二版的[《Rust 程序设计语言》][book]本组织也翻译了前几个章节，后面发现有更完整的翻译成品，所以本组织整合已有的资源而不再重新翻译，我们欢迎所有的 Rust 中文翻译作者加入翻译项目组。
