@@ -20,7 +20,7 @@ content = "👉 Rust 官方的两个必备学习教程"
 
 [[extra.items]]
 title = "Rust 程序设计语言"
-content = "Rust 官方编著的 Rust 基本教程，也称 Rust Book，中文出版书名译作<b>《Rust 权威指南》。</b>"
+content = 'Rust 官方编著的 Rust 基本教程，也称 Rust Book，中文出版书名译作<b style="color:#ff4e00;">《Rust 权威指南》。</b>'
 # url = "https://rustwiki.org/zh-CN/book"
 path = "zh-CN/book"
 icon = "ti-medall"
