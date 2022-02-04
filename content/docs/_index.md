@@ -78,7 +78,7 @@ repo = "https://github.com/rust-lang-cn/edition-guide-cn/fork"
 title = "rustdoc 手册"
 content = "rustdoc 手册详细介绍了如何使用 rustdoc 命令或 cargo doc 来生成漂亮的 crate 文档，发布 crate 前很有必要熟悉 rustdoc 的相关内容。"
 path = "zh-CN/rustdoc"
-rust_doing = true
+rust_done = true
 repo = "https://github.com/rust-lang-cn/rustdoc-cn/fork"
 
 [[extra.docs]]

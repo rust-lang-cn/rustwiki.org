@@ -83,7 +83,7 @@ title = "rustdoc 手册"
 content = "学习 rustdoc 命令和使用 cargo doc 来生成漂亮的 Rust crate 的帮助文档，更好地管理和上传项目 API 文档。"
 path = "zh-CN/rustdoc"
 icon = "ti-control-shuffle"
-is_doing = true
+translate_done = true
 
 [[extra.other_items]]
 title = "rustc 手册"
