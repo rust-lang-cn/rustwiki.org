@@ -72,7 +72,7 @@ is_doing = true
 
 [[extra.other_items]]
 title = "Rust 版本指南"
-content = "了解 Rust 版本有关内容，比如初版（Rust 2015）和 Rust 2018 版，掌握如何迁移代码。"
+content = "了解 Rust 版本有关内容，比如初版（Rust 2015）、Rust 2018 版和 2021 版，掌握如何迁移代码。"
 # url = "https://rustwiki.org/zh-CN/edition-guide/"
 path = "zh-CN/edition-guide"
 icon = "ti-layers-alt"

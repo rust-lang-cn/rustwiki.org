@@ -69,7 +69,7 @@ repo = "https://github.com/rust-lang-cn/rustwiki.org/fork"
 
 [[extra.docs]]
 title = "Rust 版本指南"
-content = "关于 Rust 的版本介绍，2018 版和未来的 2021 版和 2024 版，了解 Rust 语言如何在大版本中确保 Rust 进行稳定地改革和前进。"
+content = "关于 Rust 的版本介绍，初版（2015 版）、2018 版、2021 版和未来的 2024 版，了解 Rust 语言如何在大版本中确保 Rust 进行稳定地改革和前进。"
 path = "zh-CN/edition-guide"
 rust_done = true
 repo = "https://github.com/rust-lang-cn/edition-guide-cn/fork"
