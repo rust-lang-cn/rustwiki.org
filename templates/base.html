@@ -16,7 +16,26 @@
 	<link href="{{ get_url(path="css/main.css") | safe }}" rel="stylesheet" type="text/css">
 	{% if config.generate_feed %}
     <link type="application/atom+xml" rel="alternate" href="{{ get_url(path=config.feed_filename | default(value="atom.xml")) | safe }}" title="{{ config.title | default(value="Rust Wiki") }}" />
-    {% endif %}
+  {% endif %}
+  
+  {% if config.base_url == "https://rustwiki.org.cn" -%}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFFPZ2X5CB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HFFPZ2X5CB');
+    </script>
+
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "b8ld2k82n3");
+    </script>
+  {%- endif %}
 </head>
 <body class="page-kube">
 {% block header -%}
@@ -38,6 +57,11 @@
 						{% for menu in config.extra.menu %}
 							<li><a href="{{ menu.url | default(value=get_url(path=menu.path | default(value="/") | safe) | safe) | safe }}">{{ menu.name }}</a></li>
 						{% endfor %}
+            {% if config.base_url == "https://rustwiki.org" %}
+              <li><a href="https://rustwiki.org.cn">国内站点</a></li>
+            {% else %}
+              <li><a href="https://rustwiki.org">全球站点</a></li>
+            {% endif %}
 					</ul>
 				{%- endif %}
 			</nav>
@@ -67,7 +91,12 @@
 					{%- endif %}
 				</ul>
 			</nav>
-			<p>{{ config.extra.copy | default(value="&copy; 2016-2021 rust-lang-cn") | safe }}</p>
+			<p class="copyright">
+        {{ config.extra.copy | default(value="&copy; 2016-2021 rust-lang-cn") | safe }}
+        {% if config.base_url == "https://rustwiki.org.cn" %}
+          <a href="https://beian.miit.gov.cn" target="_blank">沪 ICP 备 15051443 号-5</a>
+        {% endif %}
+      </p>
 		</footer>
 	</footer>
 {% endblock footer %}

@@ -6,7 +6,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/rust-lang-cn/rustwiki.org?color=gold)
 ![rustwiki.org](https://img.shields.io/website?up_message=rustwiki.org&url=https%3A%2F%2Frustwiki.org)
 
-This is the source code of the [rustwiki.org](https://rustwiki.org) website.
+This is the source code of the [rustwiki.org](https://rustwiki.org) and [rustwiki.org.cn](https://rustwiki.org.cn) websites.
 
 ## Running and Building
 
