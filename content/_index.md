@@ -101,7 +101,7 @@ is_doing = true
 
 [[extra.other_items]]
 title = "Rust 规范文档"
-content = "Rust 中文资源和配套措施，相关翻译指引的范，以及中文翻译项目组的社区运作说明等。"
+content = "Rust 中文资源和配套措施，相关翻译指引的规范，以及中文翻译项目组的社区运作说明等。"
 # url = "https://rustwiki.org/wiki"
 path = "wiki"
 icon = "ti-ruler-pencil"
