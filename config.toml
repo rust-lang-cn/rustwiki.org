@@ -31,7 +31,7 @@ highlight_theme = "base16-ocean-light"
 author = "rust-lang-cn"
 
 language_code = "zh-CN"
-copy = "&copy; 2016-2022 rust-lang-cn"
+copy = "&copy; 2016-2023 rust-lang-cn"
 
 
 
